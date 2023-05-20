@@ -1,0 +1,30 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.ui.carameldaddy.header {
+	color: @carameldaddyTextColor;
+}
+.ui.michaelblackson.header {
+	color: @michaelblacksonTextColor;
+}
+.ui.baleigh.header {
+	color: @baleighTextColor;
+}
+.ui.sunbathedbaleigh.header {
+	color: @sunbathedbaleighTextColor;
+}
+.ui.esodaaa.header {
+	color: @esodaaaTextColor;
+}
+.ui.chocolatemilf.header {
+	color: @chocolatemilfTextColor;
+}
+.ui.jcob.header {
+	color: @jcobTextColor;
+}
+.ui.jackthenavyguy.header {
+	color: @jackthenavyguyTextColor;
+}
+.ui.lexusblue.header {
+	color: @lexusblueTextColor;
+}

@@ -85,8 +85,33 @@ def getColorValues(color, colorValue, lightColorValue):
     return colorValues
 
 
-for k, v in getColorSettings("lexusblue").items():
-    print(f"{k}: {v}")
-print("\n\n")
-for k, v in getColorValues("lexusblue", "#0d2475", "#0d2ea3").items():
-    print(f"{k}: {v}")
+# for k, v in getColorSettings("lexusblue").items():
+#    print(f"{k}: {v}")
+# print("\n\n")
+# for k, v in getColorValues("lexusblue", "#0d2475", "#0d2ea3").items():
+#    print(f"{k}: {v}")
+
+colors = [
+    dict(name="carameldaddy", bg="#C68E17", text="#FFFFFF"),
+    dict(name="michaelblackson", bg="#000000", text="#FFFFFF"),
+    dict(name="baleigh", bg="#FFFFFF", text="#000000"),
+    dict(name="sunbathedbaleigh", bg="#FF0000", text="#FFFFFF"),
+    dict(name="esodaaa", bg="#DC143C", text="#FFFFFF"),
+    dict(name="chocolatemilf", bg="#84563c", text="#FFFFFF"),
+    dict(name="jcob", bg="#00FF00", text="#FFFFFF"),
+    dict(name="jackthenavyguy", bg="#000080", text="#FFFFFF"),
+    dict(name="lexusblue", bg="#0d2475", text="#FFFFFF"),
+]
+
+for color in colors:
+    # button
+    # print(
+    #    ".ui.{0}.button {{\n\tbackground-color: {1};\n\tcolor: {2};\n\ttext-shadow: none;\n\tbackground-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.1));\n}}".format(
+    #        color["name"], "@" + color["name"], color["text"]
+    #    )
+    # )
+    print(
+        ".ui.{0}.header {{\n\tcolor: {1};\n}}".format(
+            color["name"], "@" + color["name"] + "TextColor"
+        )
+    )
