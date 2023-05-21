@@ -203,7 +203,6 @@
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -1445,7 +1444,6 @@ template {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -2266,7 +2264,6 @@ template {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -2709,7 +2706,7 @@ template {
 *******************************/
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/LatoLatin-Regular.woff2") format("woff2") , url("../../themes/default/assets/fonts/LatoLatin-Regular.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/LatoLatin-Regular.woff2") format("woff2") , url("./themes/rohit/assets/fonts/LatoLatin-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -2718,7 +2715,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/LatoLatin-Bold.woff2") format("woff2") , url("../../themes/default/assets/fonts/LatoLatin-Bold.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/LatoLatin-Bold.woff2") format("woff2") , url("./themes/rohit/assets/fonts/LatoLatin-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -2727,7 +2724,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/LatoLatin-Italic.woff2") format("woff2") , url("../../themes/default/assets/fonts/LatoLatin-Italic.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/LatoLatin-Italic.woff2") format("woff2") , url("./themes/rohit/assets/fonts/LatoLatin-Italic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
@@ -2736,7 +2733,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/LatoLatin-BoldItalic.woff2") format("woff2") , url("../../themes/default/assets/fonts/LatoLatin-BoldItalic.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/LatoLatin-BoldItalic.woff2") format("woff2") , url("./themes/rohit/assets/fonts/LatoLatin-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
@@ -2745,7 +2742,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/Lato-Regular.woff2") format("woff2") , url("../../themes/default/assets/fonts/Lato-Regular.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/Lato-Regular.woff2") format("woff2") , url("./themes/rohit/assets/fonts/Lato-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -2754,7 +2751,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/Lato-Bold.woff2") format("woff2") , url("../../themes/default/assets/fonts/Lato-Bold.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/Lato-Bold.woff2") format("woff2") , url("./themes/rohit/assets/fonts/Lato-Bold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -2763,7 +2760,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/Lato-Italic.woff2") format("woff2") , url("../../themes/default/assets/fonts/Lato-Italic.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/Lato-Italic.woff2") format("woff2") , url("./themes/rohit/assets/fonts/Lato-Italic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
   font-display: swap;
@@ -2772,7 +2769,7 @@ template {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../themes/default/assets/fonts/Lato-BoldItalic.woff2") format("woff2") , url("../../themes/default/assets/fonts/Lato-BoldItalic.woff") format("woff");
+  src: url("./themes/rohit/assets/fonts/Lato-BoldItalic.woff2") format("woff2") , url("./themes/rohit/assets/fonts/Lato-BoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
@@ -3136,7 +3133,6 @@ input::selection {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -3881,6 +3877,71 @@ input::selection {
 /* Circular */
 /* Spaced */
 /* Packaged Theme */
+/*******************************
+            Button
+*******************************/
+/* -------------------
+       Element
+-------------------- */
+/* Button */
+/* Button defaults to using same height as input globally */
+/* Text */
+/* Internal Shadow */
+/* Box Shadow */
+/* Icon */
+/* Loader */
+/*
+@willChange: box-shadow, transform, opacity, color, background;
+*/
+/* -------------------
+        Group
+-------------------- */
+/* -------------------
+        States
+-------------------- */
+/* Hovered */
+/* Focused */
+/* Disabled */
+/* Pressed Down */
+/* Active */
+/* Active + Hovered */
+/* Loading */
+/* -------------------
+        Types
+-------------------- */
+/* Or */
+/* Icon */
+/* Labeled */
+/* hypotenuse of triangle */
+/* Labeled Icon */
+/* Inverted */
+/* Basic */
+/* Basic Hover */
+/* Basic Focus */
+/* Basic Down */
+/* Basic Active */
+/* Basic Inverted */
+/* Basic Group */
+/* -------------
+   Tertiary
+------------- */
+/* Tertiary Hover */
+/* Tertiary Focus */
+/* Tertiary Active */
+/* -------------------
+      Variations
+-------------------- */
+/* Colors */
+/* Colored */
+/* Inverted */
+/* Ordinality */
+/* Compact */
+/* Attached */
+/* Floated */
+/* Animated */
+/* Toggle */
+/* Circular */
+/* Spaced */
 /* Site Theme */
 /* -------------------------
     Central Color Map
@@ -9488,7 +9549,6 @@ input::selection {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -10624,7 +10684,6 @@ input::selection {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -11809,7 +11868,6 @@ input::selection {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -26989,7 +27047,6 @@ em[data-emoji="regional_indicator_a"]::before {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -29039,7 +29096,6 @@ i.flag.united.nations::before {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -29744,6 +29800,31 @@ i.flag.united.nations::before {
 /* Inverted */
 /* Floated */
 /* Packaged Theme */
+/*******************************
+            Header
+*******************************/
+/* -------------------
+       Element
+-------------------- */
+/* Sub Heading */
+/* Sub Header */
+/* Icon */
+/* Image */
+/* Label */
+/* Content */
+/* Paragraph after Header */
+/* -------------------
+      Variations
+-------------------- */
+/* Sizing */
+/* Sub Header */
+/* Icon Header */
+/* No Line Height Offset */
+/* Divided */
+/* Block */
+/* Attached */
+/* Inverted */
+/* Floated */
 /* Site Theme */
 /* -------------------------
     Central Color Map
@@ -30886,7 +30967,6 @@ a.ui.inverted.black.header.header.header:hover {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -31690,7 +31770,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 *******************************/
 @font-face {
   font-family: "icons";
-  src: url("../../themes/default/assets/fonts/icons.woff2") format("woff2") , url("../../themes/default/assets/fonts/icons.woff") format("woff");
+  src: url("./themes/default/assets/fonts/icons.woff2") format("woff2") , url("./themes/default/assets/fonts/icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
@@ -31700,7 +31780,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 @font-face {
   font-family: "outline-icons";
-  src: url("../../themes/default/assets/fonts/outline-icons.woff2") format("woff2") , url("../../themes/default/assets/fonts/outline-icons.woff") format("woff");
+  src: url("./themes/default/assets/fonts/outline-icons.woff2") format("woff2") , url("./themes/default/assets/fonts/outline-icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
@@ -31710,7 +31790,7 @@ Icons are order A-Z in their group, Solid, Outline, Thin (Pro only) and Brand
 }
 @font-face {
   font-family: "brand-icons";
-  src: url("../../themes/default/assets/fonts/brand-icons.woff2") format("woff2") , url("../../themes/default/assets/fonts/brand-icons.woff") format("woff");
+  src: url("./themes/default/assets/fonts/brand-icons.woff2") format("woff2") , url("./themes/default/assets/fonts/brand-icons.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: block;
@@ -38876,7 +38956,6 @@ i.icon.youtube.play::before {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -40093,7 +40172,6 @@ img.ui.bordered.image {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -42350,7 +42428,6 @@ input[type="file"].ui.black.file.input::file-selector-button:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -45248,7 +45325,6 @@ a.ui.ui.ui.inverted.basic.black.label:hover {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -47112,7 +47188,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -48800,7 +48875,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -49925,7 +49999,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -50975,7 +51048,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -52129,7 +52201,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -53952,7 +54023,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -55470,7 +55540,6 @@ ol.ui.suffixed.list li::before,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -56532,7 +56601,6 @@ span.ui.massive.text {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -57563,7 +57631,6 @@ span.ui.massive.text {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -60164,7 +60231,6 @@ span.ui.massive.text {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -62981,7 +63047,6 @@ span.ui.massive.text {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -65991,7 +66056,6 @@ Floated Menu / Item
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -67509,7 +67573,6 @@ Floated Menu / Item
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -71780,7 +71843,6 @@ Floated Menu / Item
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -72901,7 +72963,6 @@ Floated Menu / Item
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -75704,7 +75765,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -76896,7 +76956,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -78126,7 +78185,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -79568,7 +79626,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -81066,7 +81123,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -82348,7 +82404,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -83423,7 +83478,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -85047,7 +85101,6 @@ a.inverted.ui.card:hover,
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -86298,7 +86351,6 @@ body.dimmable > .dimmer {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -89160,7 +89212,6 @@ select.ui.dropdown {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -90228,7 +90279,6 @@ select.ui.dropdown {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -91668,7 +91718,6 @@ body.pushable > .pusher {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -93345,7 +93394,6 @@ body.pushable > .pusher {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -94552,7 +94600,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -96631,7 +96678,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -98285,7 +98331,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -99932,7 +99977,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -101239,7 +101283,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -102650,7 +102693,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -103684,7 +103726,6 @@ a.ui.nag {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -105080,7 +105121,6 @@ body.pushable > .pusher {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -106039,7 +106079,6 @@ body.pushable > .pusher {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -107015,7 +107054,6 @@ body.pushable > .pusher {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
@@ -108676,7 +108714,6 @@ body.pushable > .pusher {
       Site Colors
 -------------------- */
 /* ---  Colors  --- */
-/* @red: blue; */
 /* ---  Light Colors  --- */
 /* ---   Neutrals  --- */
 /* --- Colored Backgrounds --- */
