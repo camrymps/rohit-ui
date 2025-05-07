@@ -12,6 +12,11 @@ export { Tabs } from "./components/Tab";
 export { Dialog } from "./components/Dialog";
 export { Accordion } from "./components/Accordion";
 export { CodeBlock } from "./components/CodeBlock";
+// New components
+export { Alert } from "./components/Alert";
+export { Badge } from "./components/Badge";
+export { Spinner } from "./components/Spinner";
+export { Card } from "./components/Card";
 
 // Export theme
 export { windows98Theme, rohitSpecialTheme, defaultTheme } from "./theme/theme";
@@ -36,3 +41,8 @@ export type { TabsProps } from "./components/Tab";
 export type { DialogProps } from "./components/Dialog";
 export type { AccordionProps } from "./components/Accordion";
 export type { CodeBlockProps } from "./components/CodeBlock";
+// New component types
+export type { AlertProps } from "./components/Alert";
+export type { BadgeProps } from "./components/Badge";
+export type { SpinnerProps } from "./components/Spinner";
+export type { CardProps } from "./components/Card";

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started - Rohit UI</title>
+  <link rel="stylesheet" href="assets/docs.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="getting-started.html">Getting Started</a></li>
+        <li><a href="themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="components/button.html">Button</a></li>
+          <li><a href="components/checkbox.html">Checkbox</a></li>
+          <li><a href="components/radio.html">Radio</a></li>
+          <li><a href="components/textfield.html">TextField</a></li>
+          <li><a href="components/select.html">Select</a></li>
+          <li><a href="components/progressbar.html">ProgressBar</a></li>
+          <li><a href="components/window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="components/tooltip.html">Tooltip</a></li>
+          <li><a href="components/menu.html">Menu</a></li>
+          <li><a href="components/tab.html">Tabs</a></li>
+          <li><a href="components/dialog.html">Dialog</a></li>
+          <li><a href="components/accordion.html">Accordion</a></li>
+          <li><a href="components/codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="components/alert.html">Alert</a></li>
+          <li><a href="components/badge.html">Badge</a></li>
+          <li><a href="components/spinner.html">Spinner</a></li>
+          <li><a href="components/card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Getting Started with Rohit UI</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Getting Started</h1>
+            <p class="component-description">
+              Learn how to install and start using Rohit UI in your React projects.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Installation</h2>
+            <p>Install Rohit UI using npm or yarn:</p>
+            <div class="example-code">
+              # Using npm
+              npm install rohit-ui
+              
+              # Using yarn
+              yarn add rohit-ui
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Setup</h2>
+            <p>Wrap your application with the RohitUIProvider to enable themes:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> React <span class="code-keyword">from</span> <span class="code-string">'react'</span>;
+              <span class="code-keyword">import</span> { RohitUIProvider } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-function">function</span> <span class="code-function">App</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;RohitUIProvider theme=<span class="code-string">"windows98"</span>&gt;
+                    <span class="code-comment">/* Your app components */</span>
+                  &lt;/RohitUIProvider&gt;
+                );
+              }
+              
+              <span class="code-keyword">export</span> <span class="code-keyword">default</span> App;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Basic Usage</h2>
+            <p>Import and use any component from Rohit UI:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> React <span class="code-keyword">from</span> <span class="code-string">'react'</span>;
+              <span class="code-keyword">import</span> { Button, Window, TextField } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;Window title=<span class="code-string">"My First Rohit UI App"</span>&gt;
+                    &lt;TextField label=<span class="code-string">"Enter your name"</span> placeholder=<span class="code-string">"Type here..."</span> /&gt;
+                    &lt;Button onClick={() =&gt; <span class="code-function">alert</span>(<span class="code-string">'Hello from Rohit UI!'</span>)}&gt;
+                      Click Me
+                    &lt;/Button&gt;
+                  &lt;/Window&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Enabling Rohit Mode</h2>
+            <p>Each component has a special "Rohit Mode" that can be enabled with the <code>rohitMode</code> prop:</p>
+            <div class="example-code">
+              &lt;Button rohitMode&gt;Unnecessarily Complicated Button&lt;/Button&gt;
+              
+              <span class="code-comment">// You can also enable Rohit Mode globally</span>
+              &lt;RohitUIProvider theme=<span class="code-string">"windows98"</span> globalRohitMode&gt;
+                <span class="code-comment">/* All components will now have Rohit Mode enabled */</span>
+              &lt;/RohitUIProvider&gt;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Theming</h2>
+            <p>Rohit UI comes with two built-in themes:</p>
+            <ul>
+              <li><strong>windows98</strong>: The classic Windows 98 look</li>
+              <li><strong>rohitSpecial</strong>: A funky, colorful variation</li>
+            </ul>
+            <p>You can switch between themes:</p>
+            <div class="example-code">
+              <span class="code-comment">// Windows 98 theme (default)</span>
+              &lt;RohitUIProvider theme=<span class="code-string">"windows98"</span>&gt;
+                <span class="code-comment">/* Your app */</span>
+              &lt;/RohitUIProvider&gt;
+              
+              <span class="code-comment">// Rohit Special theme</span>
+              &lt;RohitUIProvider theme=<span class="code-string">"rohitSpecial"</span>&gt;
+                <span class="code-comment">/* Your app */</span>
+              &lt;/RohitUIProvider&gt;
+            </div>
+            <p>See the <a href="themes.html">Themes</a> page for more details on customizing themes.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+</body>
+</html> 

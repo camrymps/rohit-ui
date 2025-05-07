@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="../assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='../assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Button Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Button</h1>
+            <p class="component-description">
+              The Button component provides a classic Windows 98-style button with various states and options.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { Button } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Button</div>
+              </div>
+              <div class="example-content">
+                <div class="win98-button">Click Me</div>
+                
+                <div class="example-code">
+                  &lt;Button&gt;Click Me&lt;/Button&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Disabled Button</div>
+              </div>
+              <div class="example-content">
+                <div class="win98-button" style="opacity: 0.6; pointer-events: none;">Disabled</div>
+                
+                <div class="example-code">
+                  &lt;Button disabled&gt;Disabled&lt;/Button&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Primary Button</div>
+              </div>
+              <div class="example-content">
+                <div class="win98-button" style="background-color: var(--win98-navy); color: var(--win98-white);">Primary</div>
+                
+                <div class="example-code">
+                  &lt;Button primary&gt;Primary&lt;/Button&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Button</div>
+              </div>
+              <div class="example-content">
+                <div class="win98-button" style="animation: spin 2s infinite linear; background-color: var(--win98-hot-pink); color: var(--win98-white);">Rohit Mode</div>
+                
+                <div class="example-code">
+                  &lt;Button rohitMode&gt;Rohit Mode&lt;/Button&gt;
+                </div>
+                <p><em>Note: In actual Rohit Mode, the button will spin randomly when hovered and do other unexpected things.</em></p>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Button with Icon</div>
+              </div>
+              <div class="example-content">
+                <div class="win98-button" style="display: flex; align-items: center; gap: 5px;">
+                  <span style="font-size: 12px;">📁</span> Open File
+                </div>
+                
+                <div class="example-code">
+                  &lt;Button icon="file"&gt;Open File&lt;/Button&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Button with onClick Handler</div>
+              </div>
+              <div class="example-content">
+                <div class="win98-button">Alert Message</div>
+                
+                <div class="example-code">
+                  &lt;Button onClick={() => alert('Hello from Rohit UI!')}&gt;
+                    Alert Message
+                  &lt;/Button&gt;
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>children</td>
+                  <td>ReactNode</td>
+                  <td>-</td>
+                  <td>The content of the button</td>
+                </tr>
+                <tr>
+                  <td>primary</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Makes the button a primary button with themed styling</td>
+                </tr>
+                <tr>
+                  <td>disabled</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Disables the button, preventing interactions</td>
+                </tr>
+                <tr>
+                  <td>icon</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Icon to display inside the button</td>
+                </tr>
+                <tr>
+                  <td>iconPosition</td>
+                  <td>'left' | 'right'</td>
+                  <td>'left'</td>
+                  <td>Position of the icon relative to the text</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>'small' | 'medium' | 'large'</td>
+                  <td>'medium'</td>
+                  <td>Size of the button</td>
+                </tr>
+                <tr>
+                  <td>fullWidth</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Makes the button take up the full width of its container</td>
+                </tr>
+                <tr>
+                  <td>onClick</td>
+                  <td>function</td>
+                  <td>-</td>
+                  <td>Function to call when the button is clicked</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Button component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <span class="code-keyword">import</span> { Button } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-keyword">const</span> CustomButton = styled(Button)`
+                background-color: #006400;
+                color: white;
+                &:hover {
+                  background-color: #008000;
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;CustomButton&gt;Custom Styled Button&lt;/CustomButton&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Button component will:</p>
+            <ul>
+              <li>Spin randomly when hovered</li>
+              <li>Change colors unpredictably</li>
+              <li>Sometimes move away from the cursor when being clicked</li>
+              <li>Occasionally make Windows 98 error sounds</li>
+              <li>Take longer than necessary to perform simple actions</li>
+            </ul>
+            <p>Rohit Mode can be enabled per-component or globally:</p>
+            <div class="example-code">
+              <span class="code-comment">// Enable for a single button</span>
+              &lt;Button rohitMode&gt;Unnecessarily Complicated&lt;/Button&gt;
+              
+              <span class="code-comment">// Enable globally</span>
+              &lt;RohitUIProvider theme=<span class="code-string">"windows98"</span> globalRohitMode&gt;
+                <span class="code-comment">/* All components will be unnecessarily complicated */</span>
+              &lt;/RohitUIProvider&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</body>
+</html> 

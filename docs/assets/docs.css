@@ -1,0 +1,319 @@
+/* Windows 98-style CSS for Documentation */
+:root {
+  --win98-navy: #000080;
+  --win98-teal: #008080;
+  --win98-silver: #c0c0c0;
+  --win98-gray: #808080;
+  --win98-dark-gray: #404040;
+  --win98-white: #ffffff;
+  --win98-black: #000000;
+  --win98-hot-pink: #FF00FF;
+  --win98-cyan: #00FFFF;
+}
+
+body {
+  font-family: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--win98-teal);
+  color: var(--win98-black);
+  line-height: 1.5;
+}
+
+/* Windows 98 Window */
+.window {
+  background-color: var(--win98-silver);
+  border: 1px solid var(--win98-black);
+  box-shadow: inset -1px -1px 0px var(--win98-gray), inset 1px 1px 0px var(--win98-white);
+  margin: 20px;
+  position: relative;
+}
+
+.window-header {
+  background-color: var(--win98-navy);
+  color: var(--win98-white);
+  font-weight: bold;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.window-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.window-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.window-control {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--win98-silver);
+  box-shadow: inset -1px -1px 0px var(--win98-gray), inset 1px 1px 0px var(--win98-white);
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.window-content {
+  padding: 10px;
+}
+
+/* Navigation */
+.navigation {
+  width: 200px;
+  background-color: var(--win98-silver);
+  box-shadow: inset -1px -1px 0px var(--win98-gray), inset 1px 1px 0px var(--win98-white);
+  padding: 10px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin-bottom: 5px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--win98-black);
+  display: block;
+  padding: 5px;
+}
+
+.navigation a:hover {
+  background-color: var(--win98-navy);
+  color: var(--win98-white);
+}
+
+.nav-section {
+  margin-top: 15px;
+  border-top: 1px solid var(--win98-gray);
+  padding-top: 10px;
+}
+
+.nav-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Components documentation */
+.component-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--win98-gray);
+  padding-bottom: 10px;
+}
+
+.component-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.component-description {
+  margin-bottom: 20px;
+}
+
+.props-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.props-table th, .props-table td {
+  border: 1px solid var(--win98-gray);
+  padding: 8px;
+  text-align: left;
+}
+
+.props-table th {
+  background-color: var(--win98-navy);
+  color: var(--win98-white);
+}
+
+.props-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Examples */
+.example {
+  margin-bottom: 20px;
+  border: 1px solid var(--win98-gray);
+  background-color: var(--win98-white);
+}
+
+.example-header {
+  padding: 5px 10px;
+  background-color: var(--win98-silver);
+  border-bottom: 1px solid var(--win98-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-title {
+  font-weight: bold;
+}
+
+.example-content {
+  padding: 15px;
+}
+
+.example-code {
+  margin-top: 10px;
+  background-color: var(--win98-black);
+  color: var(--win98-white);
+  padding: 10px;
+  border: 1px solid var(--win98-gray);
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+}
+
+/* Button */
+.win98-button {
+  font-family: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 14px;
+  padding: 4px 16px;
+  border: none;
+  position: relative;
+  background-color: var(--win98-silver);
+  color: var(--win98-black);
+  cursor: pointer;
+  box-shadow: inset -1px -1px 0px var(--win98-gray), inset 1px 1px 0px var(--win98-white);
+  text-align: center;
+  outline: none;
+}
+
+.win98-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--win98-black);
+  pointer-events: none;
+}
+
+.win98-button:active {
+  box-shadow: inset 1px 1px 0px var(--win98-gray), inset -1px -1px 0px var(--win98-white);
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+/* Utilities */
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--win98-gray);
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rohit-badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: var(--win98-hot-pink);
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  transform: rotate(3deg);
+  z-index: 1;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--win98-navy);
+  color: var(--win98-white);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-logo {
+  width: 30px;
+  height: 30px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--win98-silver);
+  padding: 10px 20px;
+  text-align: center;
+  border-top: 1px solid var(--win98-gray);
+  font-size: 12px;
+}
+
+/* Code highlighting */
+.code-keyword {
+  color: #569CD6;
+}
+
+.code-string {
+  color: #CE9178;
+}
+
+.code-function {
+  color: #DCDCAA;
+}
+
+.code-comment {
+  color: #6A9955;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  
+  .navigation {
+    width: auto;
+    margin-bottom: 20px;
+  }
+} 

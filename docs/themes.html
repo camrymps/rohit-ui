@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themes - Rohit UI</title>
+  <link rel="stylesheet" href="assets/docs.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="getting-started.html">Getting Started</a></li>
+        <li><a href="themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="components/button.html">Button</a></li>
+          <li><a href="components/checkbox.html">Checkbox</a></li>
+          <li><a href="components/radio.html">Radio</a></li>
+          <li><a href="components/textfield.html">TextField</a></li>
+          <li><a href="components/select.html">Select</a></li>
+          <li><a href="components/progressbar.html">ProgressBar</a></li>
+          <li><a href="components/window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="components/tooltip.html">Tooltip</a></li>
+          <li><a href="components/menu.html">Menu</a></li>
+          <li><a href="components/tab.html">Tabs</a></li>
+          <li><a href="components/dialog.html">Dialog</a></li>
+          <li><a href="components/accordion.html">Accordion</a></li>
+          <li><a href="components/codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="components/alert.html">Alert</a></li>
+          <li><a href="components/badge.html">Badge</a></li>
+          <li><a href="components/spinner.html">Spinner</a></li>
+          <li><a href="components/card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Themes in Rohit UI</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Themes</h1>
+            <p class="component-description">
+              Explore the theming capabilities of Rohit UI.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Built-in Themes</h2>
+            <p>Rohit UI comes with two built-in themes:</p>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Windows 98 (Default)</div>
+              </div>
+              <div class="example-content">
+                <p>The classic Windows 98 look, featuring:</p>
+                <ul>
+                  <li>Navy blue title bars</li>
+                  <li>Silver gray backgrounds</li>
+                  <li>Classic 3D beveled borders</li>
+                  <li>Classic sans-serif fonts</li>
+                  <li>Pixel-perfect icons and controls</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Special</div>
+              </div>
+              <div class="example-content">
+                <p>A funky, colorful variation, featuring:</p>
+                <ul>
+                  <li>Hot pink title bars</li>
+                  <li>Teal backgrounds</li>
+                  <li>Exaggerated 3D effects</li>
+                  <li>Playful font variations</li>
+                  <li>Animated icons and effects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Using Themes</h2>
+            <p>To apply a theme, wrap your application with the RohitUIProvider:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { RohitUIProvider } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-function">function</span> <span class="code-function">App</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;RohitUIProvider theme=<span class="code-string">"windows98"</span>&gt;
+                    <span class="code-comment">/* Your app */</span>
+                  &lt;/RohitUIProvider&gt;
+                );
+              }
+            </div>
+            
+            <p>You can switch themes dynamically:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> React, { useState } <span class="code-keyword">from</span> <span class="code-string">'react'</span>;
+              <span class="code-keyword">import</span> { RohitUIProvider, Button } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-function">function</span> <span class="code-function">App</span>() {
+                <span class="code-keyword">const</span> [theme, setTheme] = useState(<span class="code-string">'windows98'</span>);
+                
+                <span class="code-keyword">const</span> <span class="code-function">toggleTheme</span> = () => {
+                  setTheme(theme === <span class="code-string">'windows98'</span> ? <span class="code-string">'rohitSpecial'</span> : <span class="code-string">'windows98'</span>);
+                };
+                
+                <span class="code-keyword">return</span> (
+                  &lt;RohitUIProvider theme={theme}&gt;
+                    &lt;Button onClick={toggleTheme}&gt;
+                      Switch to {theme === <span class="code-string">'windows98'</span> ? <span class="code-string">'Rohit Special'</span> : <span class="code-string">'Windows 98'</span>}
+                    &lt;/Button&gt;
+                    <span class="code-comment">/* Rest of your app */</span>
+                  &lt;/RohitUIProvider&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Creating Custom Themes</h2>
+            <p>You can create custom themes by extending the base themes:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { RohitUIProvider, createTheme } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-keyword">const</span> customTheme = createTheme({
+                name: <span class="code-string">'myCustomTheme'</span>,
+                baseTheme: <span class="code-string">'windows98'</span>,
+                colors: {
+                  primary: <span class="code-string">'#8b008b'</span>, <span class="code-comment">// Dark magenta</span>
+                  secondary: <span class="code-string">'#9acd32'</span>, <span class="code-comment">// Yellow green</span>
+                  background: <span class="code-string">'#f0f8ff'</span>, <span class="code-comment">// Alice blue</span>
+                  text: <span class="code-string">'#2f4f4f'</span>, <span class="code-comment">// Dark slate gray</span>
+                },
+                fonts: {
+                  main: <span class="code-string">'Comic Sans MS, cursive'</span>, <span class="code-comment">// A very Rohit choice</span>
+                }
+              });
+              
+              <span class="code-function">function</span> <span class="code-function">App</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;RohitUIProvider theme={customTheme}&gt;
+                    <span class="code-comment">/* Your app */</span>
+                  &lt;/RohitUIProvider&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Theme Properties</h2>
+            <p>The following theme properties can be customized:</p>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>colors.primary</td>
+                  <td>string</td>
+                  <td>Primary color used for title bars, buttons, etc.</td>
+                </tr>
+                <tr>
+                  <td>colors.secondary</td>
+                  <td>string</td>
+                  <td>Secondary color used for accents and highlights</td>
+                </tr>
+                <tr>
+                  <td>colors.background</td>
+                  <td>string</td>
+                  <td>Base background color</td>
+                </tr>
+                <tr>
+                  <td>colors.border</td>
+                  <td>string</td>
+                  <td>Color used for borders</td>
+                </tr>
+                <tr>
+                  <td>colors.text</td>
+                  <td>string</td>
+                  <td>Default text color</td>
+                </tr>
+                <tr>
+                  <td>fonts.main</td>
+                  <td>string</td>
+                  <td>Main font family</td>
+                </tr>
+                <tr>
+                  <td>fonts.heading</td>
+                  <td>string</td>
+                  <td>Font family for headings</td>
+                </tr>
+                <tr>
+                  <td>fonts.monospace</td>
+                  <td>string</td>
+                  <td>Font family for code blocks</td>
+                </tr>
+                <tr>
+                  <td>shadows.normal</td>
+                  <td>string</td>
+                  <td>Normal shadow style</td>
+                </tr>
+                <tr>
+                  <td>shadows.inset</td>
+                  <td>string</td>
+                  <td>Inset shadow style for pressed buttons, etc.</td>
+                </tr>
+                <tr>
+                  <td>borders.normal</td>
+                  <td>string</td>
+                  <td>Normal border style</td>
+                </tr>
+                <tr>
+                  <td>borders.inset</td>
+                  <td>string</td>
+                  <td>Inset border style</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+</body>
+</html> 

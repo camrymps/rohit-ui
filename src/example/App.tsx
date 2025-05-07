@@ -15,7 +15,11 @@ import {
   Tabs,
   Dialog,
   Accordion,
-  CodeBlock
+  CodeBlock,
+  Alert,
+  Badge,
+  Spinner,
+  Card
 } from '../lib';
 // Separate type imports
 import type {
@@ -266,6 +270,92 @@ for i in range(10):
             <Tooltip content="This is a tooltip with information!" rohitMode={rohitMode}>
               <Button>Hover me</Button>
             </Tooltip>
+          </div>
+          
+          <div>
+            <h3>Alert</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <Alert variant="info" rohitMode={rohitMode}>
+                This is an info alert message
+              </Alert>
+              <Alert variant="warning" title="Custom Warning" closable rohitMode={rohitMode}>
+                This is a warning alert with a custom title and close button
+              </Alert>
+              <Alert variant="error" rohitMode={rohitMode}>
+                This is an error alert message
+              </Alert>
+              <Alert variant="success" rohitMode={rohitMode}>
+                This is a success alert message
+              </Alert>
+            </div>
+          </div>
+          
+          <div>
+            <h3>Badge</h3>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              <Badge content="New" variant="primary" rohitMode={rohitMode} />
+              <Badge content={42} variant="error" rohitMode={rohitMode} />
+              <Badge content="Hot!" variant="warning" size="large" rohitMode={rohitMode} />
+              <Button>
+                Messages <Badge content={99} variant="error" rohitMode={rohitMode} />
+              </Button>
+              <Button>
+                Notifications <Badge content="" dot variant="primary" rohitMode={rohitMode} />
+              </Button>
+            </div>
+          </div>
+          
+          <div>
+            <h3>Spinner</h3>
+            <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+              <Spinner size="small" label="Loading..." rohitMode={rohitMode} />
+              <Spinner variant="primary" rohitMode={rohitMode} />
+              <Spinner variant="secondary" size="large" label="Processing..." rohitMode={rohitMode} />
+              <Spinner variant="error" inline label="Error..." rohitMode={rohitMode} />
+            </div>
+          </div>
+          
+          <div>
+            <h3>Card</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <Card 
+                title="Basic Card" 
+                rohitMode={rohitMode}
+                footer={<Button size="small">Action</Button>}
+              >
+                This is a basic card with default styling
+              </Card>
+              
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Card 
+                  title="Primary Card" 
+                  variant="primary" 
+                  width="200px"
+                  elevated
+                  rohitMode={rohitMode}
+                >
+                  Card with primary styling
+                </Card>
+                
+                <Card 
+                  title="Success Card" 
+                  variant="success" 
+                  width="200px"
+                  rohitMode={rohitMode}
+                >
+                  Card with success styling
+                </Card>
+                
+                <Card 
+                  title="Warning Card" 
+                  variant="warning" 
+                  width="200px"
+                  rohitMode={rohitMode}
+                >
+                  Card with warning styling
+                </Card>
+              </div>
+            </div>
           </div>
 
           <div>

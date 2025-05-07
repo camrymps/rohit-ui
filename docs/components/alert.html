@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="../assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='../assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Alert Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Alert</h1>
+            <p class="component-description">
+              The Alert component displays important messages to users with different severity levels in a Windows 98 style.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Alert</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-gray); background-color: var(--win98-silver); padding: 10px; margin-bottom: 10px;">
+                  This is a standard alert message.
+                </div>
+                
+                <div class="example-code">
+                  &lt;Alert&gt;This is a standard alert message.&lt;/Alert&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Alert Severity Levels</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid #228B22; background-color: #E0F8E0; padding: 10px; margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="margin-right: 10px; font-size: 16px;">✓</span>
+                  <span>Success! Your file has been saved.</span>
+                </div>
+                
+                <div style="border: 1px solid #0000CD; background-color: #E0E0F8; padding: 10px; margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="margin-right: 10px; font-size: 16px;">ℹ</span>
+                  <span>Information: Windows 98 was released in 1998.</span>
+                </div>
+                
+                <div style="border: 1px solid #DAA520; background-color: #FFF8E0; padding: 10px; margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="margin-right: 10px; font-size: 16px;">⚠</span>
+                  <span>Warning: Your system is running low on memory.</span>
+                </div>
+                
+                <div style="border: 1px solid #CD0000; background-color: #F8E0E0; padding: 10px; margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="margin-right: 10px; font-size: 16px;">✕</span>
+                  <span>Error: A problem has been detected and Windows has been shut down to prevent damage to your computer.</span>
+                </div>
+                
+                <div class="example-code">
+                  <span class="code-comment">// Success alert</span>
+                  &lt;Alert severity=<span class="code-string">"success"</span>&gt;Success! Your file has been saved.&lt;/Alert&gt;
+                  
+                  <span class="code-comment">// Information alert</span>
+                  &lt;Alert severity=<span class="code-string">"info"</span>&gt;Information: Windows 98 was released in 1998.&lt;/Alert&gt;
+                  
+                  <span class="code-comment">// Warning alert</span>
+                  &lt;Alert severity=<span class="code-string">"warning"</span>&gt;Warning: Your system is running low on memory.&lt;/Alert&gt;
+                  
+                  <span class="code-comment">// Error alert</span>
+                  &lt;Alert severity=<span class="code-string">"error"</span>&gt;Error: A problem has been detected and Windows has been shut down to prevent damage to your computer.&lt;/Alert&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Dismissible Alert</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-gray); background-color: var(--win98-silver); padding: 10px; margin-bottom: 10px; position: relative;">
+                  This alert can be dismissed.
+                  <button style="position: absolute; top: 5px; right: 5px; width: 20px; height: 20px; font-size: 10px; padding: 0; display: flex; align-items: center; justify-content: center; background-color: var(--win98-silver); box-shadow: inset -1px -1px 0px var(--win98-gray), inset 1px 1px 0px var(--win98-white);">✕</button>
+                </div>
+                
+                <div class="example-code">
+                  &lt;Alert dismissible onDismiss={() => console.log('Alert dismissed')}&gt;
+                    This alert can be dismissed.
+                  &lt;/Alert&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Alert with Title</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-gray); background-color: var(--win98-silver); padding: 0; margin-bottom: 10px;">
+                  <div style="padding: 5px 10px; background-color: var(--win98-navy); color: var(--win98-white); font-weight: bold;">
+                    Alert Title
+                  </div>
+                  <div style="padding: 10px;">
+                    This is an alert with a title.
+                  </div>
+                </div>
+                
+                <div class="example-code">
+                  &lt;Alert title=<span class="code-string">"Alert Title"</span>&gt;
+                    This is an alert with a title.
+                  &lt;/Alert&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Alert</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-hot-pink); background-color: #FFE0FF; padding: 10px; margin-bottom: 10px; animation: alertBlink 2s infinite;">
+                  <span style="font-weight: bold; color: var(--win98-hot-pink);">ROHIT SAYS:</span> This alert is unnecessarily flashy and takes multiple clicks to dismiss!
+                </div>
+                
+                <div class="example-code">
+                  &lt;Alert rohitMode&gt;
+                    This alert is unnecessarily flashy and takes multiple clicks to dismiss!
+                  &lt;/Alert&gt;
+                </div>
+                <p><em>Note: In actual Rohit Mode, the alert will blink continuously and require multiple dismissal attempts.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>children</td>
+                  <td>ReactNode</td>
+                  <td>-</td>
+                  <td>The content of the alert</td>
+                </tr>
+                <tr>
+                  <td>severity</td>
+                  <td>'success' | 'info' | 'warning' | 'error'</td>
+                  <td>'info'</td>
+                  <td>The severity level of the alert, affecting its color and icon</td>
+                </tr>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Optional title displayed at the top of the alert</td>
+                </tr>
+                <tr>
+                  <td>dismissible</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Whether the alert can be dismissed</td>
+                </tr>
+                <tr>
+                  <td>onDismiss</td>
+                  <td>function</td>
+                  <td>-</td>
+                  <td>Callback function called when the alert is dismissed</td>
+                </tr>
+                <tr>
+                  <td>icon</td>
+                  <td>ReactNode</td>
+                  <td>Default severity icon</td>
+                  <td>Custom icon to display in the alert</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Alert component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-keyword">const</span> CustomAlert = styled(Alert)`
+                border: 2px solid purple;
+                background-color: lavender;
+                
+                .alert-title {
+                  background-color: purple;
+                  color: white;
+                }
+                
+                .alert-icon {
+                  color: purple;
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;CustomAlert title=<span class="code-string">"Custom Alert"</span> severity=<span class="code-string">"info"</span>&gt;
+                    This alert has custom styling.
+                  &lt;/CustomAlert&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Alert component will:</p>
+            <ul>
+              <li>Blink with bright colors to get unnecessary attention</li>
+              <li>Require multiple dismissal attempts before actually closing</li>
+              <li>Occasionally reappear after being dismissed</li>
+              <li>Add "ROHIT SAYS:" prefix to all alert messages</li>
+              <li>Play Windows 98 error sounds at random intervals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes alertBlink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+  </style>
+</body>
+</html> 

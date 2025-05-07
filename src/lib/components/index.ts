@@ -11,3 +11,8 @@ export * from "./Tab";
 export * from "./Dialog";
 export * from "./Accordion";
 export * from "./CodeBlock";
+// New components
+export * from "./Alert";
+export * from "./Badge";
+export * from "./Spinner";
+export * from "./Card";
