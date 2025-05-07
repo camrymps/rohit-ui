@@ -1,211 +1,116 @@
 # Rohit UI
 
-A fully functional React-based UI kit with a Windows 98 retro theme. This UI kit is designed to be both a joke for a friend named Rohit and a fully usable, open-source component library.
+A Windows 98-style React UI kit created as a humorous tribute to someone named Rohit. This library provides a set of React components that mimic the classic Windows 98 aesthetic with an extra fun twist.
 
 ## Features
 
-- 🖥️ Windows 98 inspired design
-- 🎨 Themeable components with easy color customization
-- 🧩 Multiple components (Button, Checkbox, Radio, TextField, Select, ProgressBar, Window)
-- 😂 Easter eggs and silly features related to "Rohit"
-- 📱 Responsive design
-- 🔄 Easy to use with React
+- Complete Windows 98 aesthetic
+- Fully themeable with two built-in themes: Windows 98 (default) and "Rohit Special"
+- "Rohit Mode" easter egg on each component that adds silly animations or behaviors
+- TypeScript support for all components
+- Built with styled-components
+
+## Components
+
+### Basic Components
+
+- Button - Classic Windows 98 buttons with various variants
+- Checkbox - Square checkbox with label
+- Radio - Radio button with label
+- TextField - Text input field with label
+- Select - Dropdown selection field
+- ProgressBar - Visual indicator for tasks
+- Window - Draggable window component with title bar
+
+### Advanced Components
+
+- Tooltip - Information tooltip on hover
+- Menu - Windows 98-style cascading menus
+- Tabs - Tabbed interface for content organization
+- Dialog - Modal dialog boxes
+- Accordion - Collapsible sections
+
+### Special Components
+
+- CodeBlock - Component for displaying Python code with syntax highlighting that can "Rohit-ify" code by making it unnecessarily complicated
 
 ## Installation
 
 ```bash
 npm install rohit-ui
+# or
+yarn add rohit-ui
 ```
 
 ## Usage
 
 ```jsx
 import React from "react";
-import { RohitThemeProvider, Button, TextField } from "rohit-ui";
+import { RohitThemeProvider, Button, Window, TextField } from "rohit-ui";
 
-const App = () => {
+function App() {
   return (
     <RohitThemeProvider>
-      <div>
-        <h1>My Awesome App</h1>
-        <Button>Click Me!</Button>
-        <TextField label="Enter your name" placeholder="Type here..." />
-      </div>
+      <Window title="My App" width="400px" height="300px">
+        <TextField label="Enter your name" />
+        <Button variant="primary">Submit</Button>
+
+        {/* Enable Rohit Mode for fun animations */}
+        <Button rohitMode>Rohit Mode!</Button>
+      </Window>
     </RohitThemeProvider>
   );
-};
-
-export default App;
+}
 ```
 
-## Components
+## Rohit Mode
 
-### Button
-
-```jsx
-<Button
-  variant="primary" // 'primary', 'secondary', 'success', 'error', 'warning', 'info'
-  size="medium" // 'small', 'medium', 'large'
-  fullWidth={false}
-  active={false}
-  rohitMode={false} // Enables silly animations
-  onClick={() => console.log("Clicked!")}
->
-  Click Me!
-</Button>
-```
-
-### Checkbox
-
-```jsx
-<Checkbox
-  label="Accept terms"
-  checked={isChecked}
-  onChange={() => setIsChecked(!isChecked)}
-  rohitMode={false} // Enables silly features
-/>
-```
-
-### Radio
-
-```jsx
-<Radio
-  name="options"
-  value="option1"
-  label="Option 1"
-  checked={selectedOption === "option1"}
-  onChange={() => setSelectedOption("option1")}
-  rohitMode={false} // Enables silly features
-/>
-```
-
-### TextField
-
-```jsx
-<TextField
-  label="Username"
-  value={username}
-  onChange={(e) => setUsername(e.target.value)}
-  placeholder="Enter username"
-  error="Username is required" // Optional error message
-  fullWidth={true}
-  rohitMode={false} // Enables silly features
-/>
-```
-
-### Select
-
-```jsx
-const options = [
-  { value: "option1", label: "Option 1" },
-  { value: "option2", label: "Option 2" },
-];
-
-<Select
-  label="Choose an option"
-  options={options}
-  value={selectedValue}
-  onChange={(value) => setSelectedValue(value)}
-  error="Please select an option" // Optional error message
-  fullWidth={true}
-  rohitMode={false} // Enables silly features
-/>;
-```
-
-### ProgressBar
-
-```jsx
-<ProgressBar
-  value={50}
-  max={100}
-  label="Download Progress"
-  showValue={true}
-  fullWidth={true}
-  rohitMode={false} // Enables silly features
-/>
-```
-
-### Window
-
-```jsx
-<Window
-  title="My Window"
-  width="400px"
-  height="300px"
-  initialPosition={{ x: 50, y: 50 }}
-  resizable={true}
-  minimizable={true}
-  maximizable={true}
-  closable={true}
-  onClose={() => console.log("Window closed")}
-  active={true}
-  icon="path/to/icon.png" // Optional
->
-  <div>Window content goes here</div>
-</Window>
-```
+Each component includes a `rohitMode` prop that enables silly animations or behaviors as a fun easter egg. For example, buttons will pulse and rotate slightly on hover.
 
 ## Theming
 
-Rohit UI comes with two built-in themes:
+The library comes with two built-in themes:
 
-- Windows 98 Theme (default)
-- Rohit Special Theme (a funky variation)
+- Windows 98 Theme - A faithful recreation of the classic Windows 98 UI
+- Rohit Special Theme - A funky variation with bright colors and Comic Sans MS
 
-You can switch between themes or create your own:
+You can switch themes or create your own:
 
 ```jsx
-import { useRohitTheme } from "rohit-ui";
+import { RohitThemeProvider, useRohitTheme, Button } from "rohit-ui";
 
-const MyComponent = () => {
+function MyComponent() {
   const { theme, setTheme, availableThemes } = useRohitTheme();
-
-  const switchTheme = () => {
-    // Switch to the next available theme
-    const currentIndex = availableThemes.findIndex(
-      (t) => t.name === theme.name
-    );
-    const nextIndex = (currentIndex + 1) % availableThemes.length;
-    setTheme(availableThemes[nextIndex]);
-  };
 
   return (
     <div>
       <p>Current theme: {theme.name}</p>
-      <button onClick={switchTheme}>Switch Theme</button>
+      <Button onClick={() => setTheme(availableThemes[1])}>Switch Theme</Button>
     </div>
   );
-};
+}
 ```
 
-## Creating Custom Themes
+## Development
 
-```jsx
-import { RohitThemeProvider, RohitUITheme } from "rohit-ui";
+This project uses Vite for development and building.
 
-const myCustomTheme: RohitUITheme = {
-  name: "My Custom Theme",
-  colors: {
-    primary: "#ff0000",
-    secondary: "#00ff00",
-    // ... other color properties
-  },
-  // ... other theme properties
-};
+```bash
+# Run the example app
+npm run dev
 
-const App = () => {
-  return (
-    <RohitThemeProvider initialTheme={myCustomTheme}>
-      {/* Your app content */}
-    </RohitThemeProvider>
-  );
-};
+# Build the library
+npm run build
+
+# Build the example app
+npm run build:example
 ```
+
+## Project Structure
+
+- `/src/lib` - The actual UI component library
+- `/src/example` - An example app showcasing all components
 
 ## License
 
 MIT
-
-## Credits
-
-Created as a joke for Rohit, but with love for the Windows 98 aesthetic and the open-source community.
