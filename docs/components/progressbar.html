@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { ProgressBar } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -102,8 +102,7 @@
                   <div style="width: 60%; height: 100%; background: var(--win98-navy);"></div>
                 </div>
                 <div class="example-code">
-                  &lt;ProgressBar value={60} /&gt;
-                </div>
+                  <pre><code class="language-tsx"><ProgressBar value={60} /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -115,8 +114,7 @@
                   <div style="width: 80%; height: 100%; background: var(--win98-navy); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">80%</div>
                 </div>
                 <div class="example-code">
-                  &lt;ProgressBar value={80} showLabel /&gt;
-                </div>
+                  <pre><code class="language-tsx"><ProgressBar value={80} showLabel /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -128,8 +126,7 @@
                   <div style="width: 60px; height: 100%; background: var(--win98-navy); position: absolute; left: 0; animation: indeterminate 1s linear infinite;"></div>
                 </div>
                 <div class="example-code">
-                  &lt;ProgressBar indeterminate /&gt;
-                </div>
+                  <pre><code class="language-tsx"><ProgressBar indeterminate /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -141,8 +138,7 @@
                   <div style="width: 60%; height: 100%; background: var(--win98-hot-pink); animation: wiggle 1s infinite;"></div>
                 </div>
                 <div class="example-code">
-                  &lt;ProgressBar value={60} rohitMode /&gt;
-                </div>
+                  <pre><code class="language-tsx"><ProgressBar value={60} rohitMode /></code></pre></div>
                 <p><em>Note: In Rohit Mode, the bar will wiggle, change color, and sometimes fill up or empty randomly.</em></p>
               </div>
             </div>
@@ -199,7 +195,7 @@
             <p>You can customize the ProgressBar component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { ProgressBar } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomProgressBar = styled(ProgressBar)`
                 background: #f0f0f0;

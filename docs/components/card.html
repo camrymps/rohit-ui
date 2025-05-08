@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Card } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -103,10 +103,9 @@
                   <p style="margin: 0;">This is a basic card with some content.</p>
                 </div>
                 <div class="example-code">
-                  &lt;Card title=<span class="code-string">"Card Title"</span>&gt;
+                  <pre><code class="language-tsx"><Card title=<span class="code-string">"Card Title"</span>>
                     This is a basic card with some content.
-                  &lt;/Card&gt;
-                </div>
+                  </Card></code></pre></div>
               </div>
             </div>
 
@@ -125,10 +124,10 @@
                 </div>
                 <div class="example-code">
                   &lt;Card title=<span class="code-string">"Card with Actions"</span>&gt;
-                    &lt;p&gt;This card has some action buttons.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This card has some action buttons.</p></code></pre>
                     &lt;div style={{ display: 'flex', gap: '8px' }}&gt;
-                      &lt;Button&gt;Action 1&lt;/Button&gt;
-                      &lt;Button&gt;Action 2&lt;/Button&gt;
+                      <pre><code class="language-tsx"><Button>Action 1</Button></code></pre>
+                      <pre><code class="language-tsx"><Button>Action 2</Button></code></pre>
                     &lt;/div&gt;
                   &lt;/Card&gt;
                 </div>
@@ -145,10 +144,9 @@
                   <p style="margin: 0;">This card is extra special in Rohit Mode!</p>
                 </div>
                 <div class="example-code">
-                  &lt;Card title=<span class="code-string">"✨ Fancy Card ✨"</span> rohitMode&gt;
+                  <pre><code class="language-tsx"><Card title=<span class="code-string">"✨ Fancy Card ✨"</span> rohitMode>
                     This card is extra special in Rohit Mode!
-                  &lt;/Card&gt;
-                </div>
+                  </Card></code></pre></div>
                 <p><em>Note: In Rohit Mode, the card will wiggle, change color, and sometimes display random emojis.</em></p>
               </div>
             </div>
@@ -205,7 +203,7 @@
             <p>You can customize the Card component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Card } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomCard = styled(Card)`
                 background: linear-gradient(45deg, var(--win98-silver), white);

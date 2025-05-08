@@ -88,7 +88,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Marquee } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Marquee } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -105,9 +105,9 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Marquee&gt;
-                    Welcome to Rohit UI! This is a basic marquee text that scrolls from right to left.
-                  &lt;/Marquee&gt;
+                  <pre><code class="language-tsx"><Marquee>
+  Welcome to Rohit UI! This is a basic marquee text that scrolls from right to left.
+</Marquee></code></pre>
                 </div>
               </div>
             </div>
@@ -123,9 +123,9 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Marquee speed={10}&gt;
-                    This marquee scrolls faster than the default speed.
-                  &lt;/Marquee&gt;
+                  <pre><code class="language-tsx"><Marquee speed={10}>
+  This marquee scrolls faster than the default speed.
+</Marquee></code></pre>
                 </div>
               </div>
             </div>
@@ -141,9 +141,9 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Marquee rohitMode&gt;
-                    ✨ Welcome to the MOST AMAZING MARQUEE EVER! ✨
-                  &lt;/Marquee&gt;
+                  <pre><code class="language-tsx"><Marquee rohitMode>
+  ✨ Welcome to the MOST AMAZING MARQUEE EVER! ✨
+</Marquee></code></pre>
                 </div>
                 <p><em>Note: In Rohit Mode, the marquee will wiggle, change color, and sometimes scroll in random directions.</em></p>
               </div>
@@ -206,27 +206,27 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Marquee component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Marquee } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
-              
-              <span class="code-keyword">const</span> CustomMarquee = styled(Marquee)`
-                background: linear-gradient(90deg, var(--win98-silver), white);
-                border-width: 3px;
-                border-style: dashed;
-                
-                .marquee-content {
-                  font-family: 'Comic Sans MS', sans-serif;
-                  text-shadow: 2px 2px var(--win98-navy);
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomMarquee&gt;
-                    Custom styled marquee content
-                  &lt;/CustomMarquee&gt;
-                );
-              }
+              <pre><code class="language-typescript">import styled from 'styled-components';
+import { Marquee } from 'rohit-ui';
+
+const CustomMarquee = styled(Marquee)`
+  background: linear-gradient(90deg, var(--win98-silver), white);
+  border-width: 3px;
+  border-style: dashed;
+  
+  .marquee-content {
+    font-family: 'Comic Sans MS', sans-serif;
+    text-shadow: 2px 2px var(--win98-navy);
+  }
+`;
+
+function MyComponent() {
+  return (
+    <CustomMarquee>
+      Custom styled marquee content
+    </CustomMarquee>
+  );
+}</code></pre>
             </div>
           </div>
 

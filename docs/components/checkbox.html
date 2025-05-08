@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Checkbox } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -114,12 +114,11 @@
                 </div>
                 
                 <div class="example-code">
-                  <span class="code-comment">// Unchecked</span>
-                  &lt;Checkbox label=<span class="code-string">"Unchecked"</span> /&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Unchecked</span>
+                  <Checkbox label=<span class="code-string">"Unchecked"</span> />
                   
                   <span class="code-comment">// Checked</span>
-                  &lt;Checkbox label=<span class="code-string">"Checked"</span> checked /&gt;
-                </div>
+                  <Checkbox label=<span class="code-string">"Checked"</span> checked /></code></pre></div>
               </div>
             </div>
             
@@ -142,12 +141,11 @@
                 </div>
                 
                 <div class="example-code">
-                  <span class="code-comment">// Disabled unchecked</span>
-                  &lt;Checkbox label=<span class="code-string">"Disabled Unchecked"</span> disabled /&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Disabled unchecked</span>
+                  <Checkbox label=<span class="code-string">"Disabled Unchecked"</span> disabled />
                   
                   <span class="code-comment">// Disabled checked</span>
-                  &lt;Checkbox label=<span class="code-string">"Disabled Checked"</span> checked disabled /&gt;
-                </div>
+                  <Checkbox label=<span class="code-string">"Disabled Checked"</span> checked disabled /></code></pre></div>
               </div>
             </div>
             
@@ -164,17 +162,16 @@
                 </div>
                 
                 <div class="example-code">
-                  <span class="code-keyword">const</span> [checked, setChecked] = useState(<span class="code-keyword">true</span>);
+                  <pre><code class="language-tsx"><span class="code-keyword">const</span> [checked, setChecked] = useState(<span class="code-keyword">true</span>);
                   
-                  &lt;Checkbox 
+                  <Checkbox 
                     label=<span class="code-string">"Subscribe to newsletter"</span>
                     checked={checked}
                     onChange={(e) => {
                       setChecked(e.target.checked);
                       console.log(<span class="code-string">"Checkbox changed:"</span>, e.target.checked);
                     }} 
-                  /&gt;
-                </div>
+                  /></code></pre></div>
               </div>
             </div>
             
@@ -191,8 +188,7 @@
                 </div>
                 
                 <div class="example-code">
-                  &lt;Checkbox label=<span class="code-string">"Indeterminate"</span> indeterminate /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Checkbox label=<span class="code-string">"Indeterminate"</span> indeterminate /></code></pre></div>
               </div>
             </div>
             
@@ -209,8 +205,7 @@
                 </div>
                 
                 <div class="example-code">
-                  &lt;Checkbox label=<span class="code-string">"Unnecessarily Complicated"</span> checked rohitMode /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Checkbox label=<span class="code-string">"Unnecessarily Complicated"</span> checked rohitMode /></code></pre></div>
                 <p><em>Note: In actual Rohit Mode, the checkbox will wiggle randomly, change state unexpectedly, and occasionally refuse to be unchecked.</em></p>
               </div>
             </div>
@@ -291,7 +286,7 @@
             <p>You can customize the Checkbox component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Checkbox } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomCheckbox = styled(Checkbox)`
                 .checkbox-box {

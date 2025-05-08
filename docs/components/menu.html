@@ -86,7 +86,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Menu } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -103,8 +103,7 @@
                   <div style="padding: 4px 8px;">View</div>
                 </div>
                 <div class="example-code">
-                  &lt;Menu items={[{ label: <span class="code-string">"File"</span> }, { label: <span class="code-string">"Edit"</span> }, { label: <span class="code-string">"View"</span> }]} /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Menu items={[{ label: <span class="code-string">"File"</span> }, { label: <span class="code-string">"Edit"</span> }, { label: <span class="code-string">"View"</span> }]} /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -118,8 +117,7 @@
                   <div style="padding: 4px 8px; display: flex; align-items: center;"><span style="margin-right: 6px;">👁️</span>View</div>
                 </div>
                 <div class="example-code">
-                  &lt;Menu items={[{ label: <span class="code-string">"File"</span>, icon: <span class="code-string">"📁"</span> }, ...]} /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Menu items={[{ label: <span class="code-string">"File"</span>, icon: <span class="code-string">"📁"</span> }, ...]} /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -137,8 +135,7 @@
                   <div style="padding: 4px 8px;">Edit</div>
                 </div>
                 <div class="example-code">
-                  &lt;Menu items={[{ label: <span class="code-string">"File"</span>, submenu: [{ label: <span class="code-string">"New"</span> }, { label: <span class="code-string">"Open"</span> }] }, ...]} /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Menu items={[{ label: <span class="code-string">"File"</span>, submenu: [{ label: <span class="code-string">"New"</span> }, { label: <span class="code-string">"Open"</span> }] }, ...]} /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -150,8 +147,7 @@
                   <div style="padding: 4px 8px; color: var(--win98-hot-pink);">UNNECESSARILY COMPLICATED</div>
                 </div>
                 <div class="example-code">
-                  &lt;Menu items={[{ label: <span class="code-string">"UNNECESSARILY COMPLICATED"</span> }]} rohitMode /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Menu items={[{ label: <span class="code-string">"UNNECESSARILY COMPLICATED"</span> }]} rohitMode /></code></pre></div>
                 <p><em>Note: In Rohit Mode, the menu will wiggle, change color, and sometimes randomly reorder its items.</em></p>
               </div>
             </div>
@@ -202,7 +198,7 @@
             <p>You can customize the Menu component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Menu } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomMenu = styled(Menu)`
                 background: #f0f0f0;

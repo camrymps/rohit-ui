@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Tooltip } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -106,7 +106,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Tooltip content=<span class="code-string">"This is a tooltip"</span>&gt;
-                    &lt;button&gt;Hover me&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Hover me</button></code></pre>
                   &lt;/Tooltip&gt;
                 </div>
               </div>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Tooltip content=<span class="code-string">"Tooltip above"</span> position=<span class="code-string">"top"</span>&gt;
-                    &lt;button&gt;Hover me&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Hover me</button></code></pre>
                   &lt;/Tooltip&gt;
                 </div>
               </div>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Tooltip content=<span class="code-string">"UNNECESSARILY COMPLICATED"</span> rohitMode&gt;
-                    &lt;button&gt;Hover me&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Hover me</button></code></pre>
                   &lt;/Tooltip&gt;
                 </div>
                 <p><em>Note: In Rohit Mode, the tooltip will wiggle, change color, and sometimes randomly reposition itself.</em></p>
@@ -209,7 +209,7 @@
             <p>You can customize the Tooltip component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Tooltip } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomTooltip = styled(Tooltip)`
                 background: #f0f0f0;
@@ -222,7 +222,7 @@
               <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
                 <span class="code-keyword">return</span> (
                   &lt;CustomTooltip content=<span class="code-string">"Custom tooltip"</span>&gt;
-                    &lt;button&gt;Hover me&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Hover me</button></code></pre>
                   &lt;/CustomTooltip&gt;
                 );
               }

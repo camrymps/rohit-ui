@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Radio } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -111,9 +111,8 @@
                   <label>Option 2 (Selected)</label>
                 </div>
                 <div class="example-code">
-                  &lt;Radio label=<span class="code-string">"Option 1"</span> /&gt;
-                  &lt;Radio label=<span class="code-string">"Option 2"</span> checked /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Radio label=<span class="code-string">"Option 1"</span> />
+                  <Radio label=<span class="code-string">"Option 2"</span> checked /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -127,8 +126,7 @@
                   <label>Disabled</label>
                 </div>
                 <div class="example-code">
-                  &lt;Radio label=<span class="code-string">"Disabled"</span> disabled /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Radio label=<span class="code-string">"Disabled"</span> disabled /></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -151,11 +149,10 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Radio.Group value=<span class="code-string">fruit</span> onChange={setFruit}&gt;
-                    &lt;Radio value=<span class="code-string">"apple"</span> label=<span class="code-string">"Apple"</span> /&gt;
-                    &lt;Radio value=<span class="code-string">"banana"</span> label=<span class="code-string">"Banana"</span> /&gt;
-                  &lt;/Radio.Group&gt;
-                </div>
+                  <pre><code class="language-tsx"><Radio.Group value=<span class="code-string">fruit</span> onChange={setFruit}>
+                    <Radio value=<span class="code-string">"apple"</span> label=<span class="code-string">"Apple"</span> />
+                    <Radio value=<span class="code-string">"banana"</span> label=<span class="code-string">"Banana"</span> />
+                  </Radio.Group></code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -170,8 +167,7 @@
                   <label style="color: var(--win98-hot-pink);">Unnecessarily Complicated</label>
                 </div>
                 <div class="example-code">
-                  &lt;Radio label=<span class="code-string">"Unnecessarily Complicated"</span> checked rohitMode /&gt;
-                </div>
+                  <pre><code class="language-tsx"><Radio label=<span class="code-string">"Unnecessarily Complicated"</span> checked rohitMode /></code></pre></div>
                 <p><em>Note: In Rohit Mode, the radio will wiggle, change state unexpectedly, and sometimes refuse to be deselected.</em></p>
               </div>
             </div>
@@ -246,7 +242,7 @@
             <p>You can customize the Radio component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Radio } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomRadio = styled(Radio)`
                 .radio-box {

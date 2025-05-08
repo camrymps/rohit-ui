@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -110,13 +110,12 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
+                  <pre><code class="language-tsx"><Alert
                     title=<span class="code-string">"Alert"</span>
                     message=<span class="code-string">"This is an important message."</span>
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
-                  /&gt;
-                </div>
+                  /></code></pre></div>
               </div>
             </div>
 
@@ -138,7 +137,7 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
+                  <pre><code class="language-tsx"><Alert
                     title=<span class="code-string">"Warning"</span>
                     message=<span class="code-string">"This action cannot be undone."</span>
                     icon=<span class="code-string">"⚠️"</span>
@@ -148,8 +147,7 @@
                       { text: 'Cancel', onClick: () => setIsOpen(false) },
                       { text: 'Continue', onClick: handleContinue }
                     ]}
-                  /&gt;
-                </div>
+                  /></code></pre></div>
               </div>
             </div>
 
@@ -170,15 +168,14 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
+                  <pre><code class="language-tsx"><Alert
                     title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>
                     message=<span class="code-string">"This alert is unnecessarily complicated."</span>
                     icon=<span class="code-string">"🎉"</span>
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
                     rohitMode
-                  /&gt;
-                </div>
+                  /></code></pre></div>
                 <p><em>Note: In Rohit Mode, the alert will wiggle, change color, and sometimes randomly reposition itself.</em></p>
               </div>
             </div>
@@ -253,7 +250,7 @@
             <p>You can customize the Alert component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomAlert = styled(Alert)`
                 background: #f0f0f0;

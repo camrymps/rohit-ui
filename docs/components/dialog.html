@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Dialog } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -116,10 +116,10 @@
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
                   &gt;
-                    &lt;p&gt;This is a basic dialog box.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This is a basic dialog box.</p></code></pre>
                     &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
-                      &lt;Button onClick={() => setIsOpen(false)}&gt;OK&lt;/Button&gt;
-                      &lt;Button onClick={() => setIsOpen(false)}&gt;Cancel&lt;/Button&gt;
+                      <pre><code class="language-tsx"><Button onClick={() => setIsOpen(false)}>OK</Button></code></pre>
+                      <pre><code class="language-tsx"><Button onClick={() => setIsOpen(false)}>Cancel</Button></code></pre>
                     &lt;/div&gt;
                   &lt;/Dialog&gt;
                 </div>
@@ -160,19 +160,19 @@
                     onClose={() => setIsOpen(false)}
                   &gt;
                     &lt;div&gt;
-                      &lt;label&gt;File name:&lt;/label&gt;
+                      <pre><code class="language-tsx"><label>File name:</label></code></pre>
                       &lt;TextField defaultValue=<span class="code-string">"document.txt"</span> /&gt;
                     &lt;/div&gt;
                     &lt;div&gt;
-                      &lt;label&gt;Save as type:&lt;/label&gt;
+                      <pre><code class="language-tsx"><label>Save as type:</label></code></pre>
                       &lt;Select&gt;
-                        &lt;option&gt;Text Document (*.txt)&lt;/option&gt;
-                        &lt;option&gt;All Files (*.*)&lt;/option&gt;
+                        <pre><code class="language-tsx"><option>Text Document (*.txt)</option></code></pre>
+                        <pre><code class="language-tsx"><option>All Files (*.*)</option></code></pre>
                       &lt;/Select&gt;
                     &lt;/div&gt;
                     &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
-                      &lt;Button onClick={handleSave}&gt;Save&lt;/Button&gt;
-                      &lt;Button onClick={() => setIsOpen(false)}&gt;Cancel&lt;/Button&gt;
+                      <pre><code class="language-tsx"><Button onClick={handleSave}>Save</Button></code></pre>
+                      <pre><code class="language-tsx"><Button onClick={() => setIsOpen(false)}>Cancel</Button></code></pre>
                     &lt;/div&gt;
                   &lt;/Dialog&gt;
                 </div>
@@ -202,9 +202,9 @@
                     onClose={() => setIsOpen(false)}
                     rohitMode
                   &gt;
-                    &lt;p&gt;This dialog is unnecessarily complicated.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This dialog is unnecessarily complicated.</p></code></pre>
                     &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
-                      &lt;Button onClick={() => setIsOpen(false)}&gt;OK&lt;/Button&gt;
+                      <pre><code class="language-tsx"><Button onClick={() => setIsOpen(false)}>OK</Button></code></pre>
                     &lt;/div&gt;
                   &lt;/Dialog&gt;
                 </div>
@@ -270,7 +270,7 @@
             <p>You can customize the Dialog component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Dialog } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomDialog = styled(Dialog)`
                 background: #f0f0f0;
@@ -290,7 +290,7 @@
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
                   &gt;
-                    &lt;p&gt;Custom styled dialog content.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>Custom styled dialog content.</p></code></pre>
                   &lt;/CustomDialog&gt;
                 );
               }

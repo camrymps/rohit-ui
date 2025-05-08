@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Badge } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -104,7 +104,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Badge content=<span class="code-string">"3"</span>&gt;
-                    &lt;button&gt;Notifications&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Notifications</button></code></pre>
                   &lt;/Badge&gt;
                 </div>
               </div>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Badge content=<span class="code-string">"!"</span> position=<span class="code-string">"top-left"</span>&gt;
-                    &lt;button&gt;Settings&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Settings</button></code></pre>
                   &lt;/Badge&gt;
                 </div>
               </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Badge content=<span class="code-string">"∞"</span> rohitMode&gt;
-                    &lt;button&gt;Messages&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Messages</button></code></pre>
                   &lt;/Badge&gt;
                 </div>
                 <p><em>Note: In Rohit Mode, the badge will wiggle, change color, and sometimes randomly reposition itself.</em></p>
@@ -209,7 +209,7 @@
             <p>You can customize the Badge component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Badge } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomBadge = styled(Badge)`
                 background: purple;
@@ -222,7 +222,7 @@
               <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
                 <span class="code-keyword">return</span> (
                   &lt;CustomBadge content=<span class="code-string">"5"</span>&gt;
-                    &lt;button&gt;Custom Badge&lt;/button&gt;
+                    <pre><code class="language-tsx"><button>Custom Badge</button></code></pre>
                   &lt;/CustomBadge&gt;
                 );
               }

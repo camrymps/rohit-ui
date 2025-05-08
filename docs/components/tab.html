@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Tabs } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -107,18 +107,17 @@
                   <div style="padding: 16px;">Content for Tab 1</div>
                 </div>
                 <div class="example-code">
-                  &lt;Tabs&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"Tab 1"</span>&gt;
+                  <pre><code class="language-tsx"><Tabs>
+                    <Tabs.Tab title=<span class="code-string">"Tab 1"</span>>
                       Content for Tab 1
-                    &lt;/Tabs.Tab&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"Tab 2"</span>&gt;
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"Tab 2"</span>>
                       Content for Tab 2
-                    &lt;/Tabs.Tab&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"Tab 3"</span>&gt;
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"Tab 3"</span>>
                       Content for Tab 3
-                    &lt;/Tabs.Tab&gt;
-                  &lt;/Tabs&gt;
-                </div>
+                    </Tabs.Tab>
+                  </Tabs></code></pre></div>
               </div>
             </div>
 
@@ -142,18 +141,17 @@
                   <div style="padding: 16px;">Files content</div>
                 </div>
                 <div class="example-code">
-                  &lt;Tabs&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"Files"</span> icon=<span class="code-string">"📁"</span>&gt;
+                  <pre><code class="language-tsx"><Tabs>
+                    <Tabs.Tab title=<span class="code-string">"Files"</span> icon=<span class="code-string">"📁"</span>>
                       Files content
-                    &lt;/Tabs.Tab&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"Settings"</span> icon=<span class="code-string">"⚙️"</span>&gt;
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"Settings"</span> icon=<span class="code-string">"⚙️"</span>>
                       Settings content
-                    &lt;/Tabs.Tab&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"About"</span> icon=<span class="code-string">"ℹ️"</span>&gt;
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"About"</span> icon=<span class="code-string">"ℹ️"</span>>
                       About content
-                    &lt;/Tabs.Tab&gt;
-                  &lt;/Tabs&gt;
-                </div>
+                    </Tabs.Tab>
+                  </Tabs></code></pre></div>
               </div>
             </div>
 
@@ -169,12 +167,11 @@
                   <div style="padding: 16px; color: var(--win98-hot-pink);">This tab is unnecessarily complicated.</div>
                 </div>
                 <div class="example-code">
-                  &lt;Tabs rohitMode&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>&gt;
+                  <pre><code class="language-tsx"><Tabs rohitMode>
+                    <Tabs.Tab title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>>
                       This tab is unnecessarily complicated.
-                    &lt;/Tabs.Tab&gt;
-                  &lt;/Tabs&gt;
-                </div>
+                    </Tabs.Tab>
+                  </Tabs></code></pre></div>
                 <p><em>Note: In Rohit Mode, the tabs will wiggle, change color, and sometimes randomly reorder themselves.</em></p>
               </div>
             </div>
@@ -257,7 +254,7 @@
             <p>You can customize the Tabs component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Tabs } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomTabs = styled(Tabs)`
                 background: #f0f0f0;

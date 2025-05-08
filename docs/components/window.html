@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Window } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
             </div>
           </div>
 
@@ -106,7 +106,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Window title=<span class="code-string">"My Window"</span>&gt;
-                    &lt;p&gt;This is a window. You can put anything inside!&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This is a window. You can put anything inside!</p></code></pre>
                   &lt;/Window&gt;
                 </div>
               </div>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Window title=<span class="code-string">"My Window"</span> showControls&gt;
-                    &lt;p&gt;This window has controls in the title bar.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This window has controls in the title bar.</p></code></pre>
                   &lt;/Window&gt;
                 </div>
               </div>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="example-code">
                   &lt;Window title=<span class="code-string">"ROHIT MODE"</span> rohitMode&gt;
-                    &lt;p&gt;This window is unnecessarily complicated.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This window is unnecessarily complicated.</p></code></pre>
                   &lt;/Window&gt;
                 </div>
                 <p><em>Note: In Rohit Mode, the window will wiggle, change color, and sometimes randomly move or resize itself.</em></p>
@@ -206,7 +206,7 @@
             <p>You can customize the Window component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Window } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
               
               <span class="code-keyword">const</span> CustomWindow = styled(Window)`
                 background: #f0f0f0;
@@ -220,7 +220,7 @@
               <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
                 <span class="code-keyword">return</span> (
                   &lt;CustomWindow title=<span class="code-string">"Custom Window"</span>&gt;
-                    &lt;p&gt;This is a custom styled window.&lt;/p&gt;
+                    <pre><code class="language-tsx"><p>This is a custom styled window.</p></code></pre>
                   &lt;/CustomWindow&gt;
                 );
               }
