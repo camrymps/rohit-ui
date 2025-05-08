@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marquee Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="../assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='../assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+          <li><a href="marquee.html">Marquee</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Marquee Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Marquee</h1>
+            <p class="component-description">
+              The Marquee component provides a Windows 98-style scrolling text display, perfect for announcements, news tickers, or any content that needs to move across the screen.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { Marquee } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Marquee</div>
+              </div>
+              <div class="example-content">
+                <div style="background: var(--win98-silver); border: 2px solid var(--win98-navy); padding: 8px; overflow: hidden;">
+                  <div style="white-space: nowrap; animation: scroll 20s linear infinite;">
+                    Welcome to Rohit UI! This is a basic marquee text that scrolls from right to left.
+                  </div>
+                </div>
+                <div class="example-code">
+                  &lt;Marquee&gt;
+                    Welcome to Rohit UI! This is a basic marquee text that scrolls from right to left.
+                  &lt;/Marquee&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Marquee with Custom Speed</div>
+              </div>
+              <div class="example-content">
+                <div style="background: var(--win98-silver); border: 2px solid var(--win98-navy); padding: 8px; overflow: hidden;">
+                  <div style="white-space: nowrap; animation: scroll 10s linear infinite;">
+                    This marquee scrolls faster than the default speed.
+                  </div>
+                </div>
+                <div class="example-code">
+                  &lt;Marquee speed={10}&gt;
+                    This marquee scrolls faster than the default speed.
+                  &lt;/Marquee&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Marquee</div>
+              </div>
+              <div class="example-content">
+                <div style="background: var(--win98-silver); border: 2px solid var(--win98-hot-pink); padding: 8px; overflow: hidden;">
+                  <div style="white-space: nowrap; animation: scroll 15s linear infinite, wiggle 1s infinite; color: var(--win98-hot-pink);">
+                    ✨ Welcome to the MOST AMAZING MARQUEE EVER! ✨
+                  </div>
+                </div>
+                <div class="example-code">
+                  &lt;Marquee rohitMode&gt;
+                    ✨ Welcome to the MOST AMAZING MARQUEE EVER! ✨
+                  &lt;/Marquee&gt;
+                </div>
+                <p><em>Note: In Rohit Mode, the marquee will wiggle, change color, and sometimes scroll in random directions.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>children</td>
+                  <td>ReactNode</td>
+                  <td>-</td>
+                  <td>Content to display in the marquee</td>
+                </tr>
+                <tr>
+                  <td>speed</td>
+                  <td>number</td>
+                  <td>20</td>
+                  <td>Speed of the marquee animation in seconds</td>
+                </tr>
+                <tr>
+                  <td>direction</td>
+                  <td>'left' | 'right' | 'up' | 'down'</td>
+                  <td>'left'</td>
+                  <td>Direction of the marquee movement</td>
+                </tr>
+                <tr>
+                  <td>pauseOnHover</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Whether to pause the marquee when hovered</td>
+                </tr>
+                <tr>
+                  <td>className</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>CSS class to apply to the marquee container</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Marquee component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <span class="code-keyword">import</span> { Marquee } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-keyword">const</span> CustomMarquee = styled(Marquee)`
+                background: linear-gradient(90deg, var(--win98-silver), white);
+                border-width: 3px;
+                border-style: dashed;
+                
+                .marquee-content {
+                  font-family: 'Comic Sans MS', sans-serif;
+                  text-shadow: 2px 2px var(--win98-navy);
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;CustomMarquee&gt;
+                    Custom styled marquee content
+                  &lt;/CustomMarquee&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Marquee component will:</p>
+            <ul>
+              <li>Wiggle or bounce while scrolling</li>
+              <li>Change text color periodically</li>
+              <li>Sometimes scroll in random directions</li>
+              <li>Add random emojis to the text</li>
+              <li>Draw unnecessary attention to itself</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    
+    @keyframes wiggle {
+      0% { transform: translateX(100%) rotate(0deg); }
+      25% { transform: translateX(75%) rotate(-2deg); }
+      75% { transform: translateX(25%) rotate(2deg); }
+      100% { transform: translateX(-100%) rotate(0deg); }
+    }
+  </style>
+</body>
+</html> 

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkbox Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="../assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='../assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Checkbox Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Checkbox</h1>
+            <p class="component-description">
+              The Checkbox component provides a classic Windows 98-style checkbox for toggling options.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { Checkbox } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Checkbox</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-black); background-color: var(--win98-white); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white);">
+                    <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; background-color: var(--win98-navy); display: none;"></div>
+                  </div>
+                  <label>Unchecked</label>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-black); background-color: var(--win98-white); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white);">
+                    <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; background-color: var(--win98-navy);"></div>
+                  </div>
+                  <label>Checked</label>
+                </div>
+                
+                <div class="example-code">
+                  <span class="code-comment">// Unchecked</span>
+                  &lt;Checkbox label=<span class="code-string">"Unchecked"</span> /&gt;
+                  
+                  <span class="code-comment">// Checked</span>
+                  &lt;Checkbox label=<span class="code-string">"Checked"</span> checked /&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Disabled Checkbox</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px; opacity: 0.6;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-black); background-color: var(--win98-silver); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white);">
+                  </div>
+                  <label>Disabled Unchecked</label>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; opacity: 0.6;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-black); background-color: var(--win98-silver); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white);">
+                    <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; background-color: var(--win98-navy);"></div>
+                  </div>
+                  <label>Disabled Checked</label>
+                </div>
+                
+                <div class="example-code">
+                  <span class="code-comment">// Disabled unchecked</span>
+                  &lt;Checkbox label=<span class="code-string">"Disabled Unchecked"</span> disabled /&gt;
+                  
+                  <span class="code-comment">// Disabled checked</span>
+                  &lt;Checkbox label=<span class="code-string">"Disabled Checked"</span> checked disabled /&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Checkbox with onChange Handler</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-black); background-color: var(--win98-white); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white);">
+                    <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; background-color: var(--win98-navy);"></div>
+                  </div>
+                  <label>Subscribe to newsletter</label>
+                </div>
+                
+                <div class="example-code">
+                  <span class="code-keyword">const</span> [checked, setChecked] = useState(<span class="code-keyword">true</span>);
+                  
+                  &lt;Checkbox 
+                    label=<span class="code-string">"Subscribe to newsletter"</span>
+                    checked={checked}
+                    onChange={(e) => {
+                      setChecked(e.target.checked);
+                      console.log(<span class="code-string">"Checkbox changed:"</span>, e.target.checked);
+                    }} 
+                  /&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Indeterminate Checkbox</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-black); background-color: var(--win98-white); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white);">
+                    <div style="position: absolute; top: 6px; left: 2px; right: 2px; height: 2px; background-color: var(--win98-navy);"></div>
+                  </div>
+                  <label>Indeterminate</label>
+                </div>
+                
+                <div class="example-code">
+                  &lt;Checkbox label=<span class="code-string">"Indeterminate"</span> indeterminate /&gt;
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Checkbox</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 14px; height: 14px; border: 1px solid var(--win98-hot-pink); background-color: var(--win98-white); position: relative; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); animation: wiggle 1s infinite;">
+                    <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; background-color: var(--win98-hot-pink);"></div>
+                  </div>
+                  <label style="color: var(--win98-hot-pink);">Unnecessarily Complicated</label>
+                </div>
+                
+                <div class="example-code">
+                  &lt;Checkbox label=<span class="code-string">"Unnecessarily Complicated"</span> checked rohitMode /&gt;
+                </div>
+                <p><em>Note: In actual Rohit Mode, the checkbox will wiggle randomly, change state unexpectedly, and occasionally refuse to be unchecked.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>label</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Label text displayed next to the checkbox</td>
+                </tr>
+                <tr>
+                  <td>checked</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Whether the checkbox is checked</td>
+                </tr>
+                <tr>
+                  <td>indeterminate</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Sets the checkbox to an indeterminate state</td>
+                </tr>
+                <tr>
+                  <td>disabled</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Disables the checkbox, preventing interactions</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Name attribute of the checkbox input</td>
+                </tr>
+                <tr>
+                  <td>id</td>
+                  <td>string</td>
+                  <td>auto-generated</td>
+                  <td>ID attribute of the checkbox input</td>
+                </tr>
+                <tr>
+                  <td>onChange</td>
+                  <td>function</td>
+                  <td>-</td>
+                  <td>Function called when the checkbox state changes</td>
+                </tr>
+                <tr>
+                  <td>labelPosition</td>
+                  <td>'left' | 'right'</td>
+                  <td>'right'</td>
+                  <td>Position of the label relative to the checkbox</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Checkbox component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <span class="code-keyword">import</span> { Checkbox } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-keyword">const</span> CustomCheckbox = styled(Checkbox)`
+                .checkbox-box {
+                  border-color: purple;
+                }
+                
+                .checkbox-indicator {
+                  background-color: purple;
+                }
+                
+                .checkbox-label {
+                  font-weight: bold;
+                  color: purple;
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;CustomCheckbox label=<span class="code-string">"Custom Styled Checkbox"</span> checked /&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Checkbox component will:</p>
+            <ul>
+              <li>Wiggle randomly, especially when hovered</li>
+              <li>Sometimes change its state unexpectedly</li>
+              <li>Occasionally refuse to be unchecked (because Rohit always wants you to opt in)</li>
+              <li>Display a comically complex animation when changing state</li>
+              <li>Sometimes require multiple clicks to change state</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</body>
+</html> 

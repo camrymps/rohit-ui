@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinner Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      <img src="../assets/images/rohit-logo.png" alt="Rohit UI Logo" class="site-logo" onerror="this.src='../assets/images/win98-logo.png'; this.onerror='';">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
+            <span>Spinner Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Spinner</h1>
+            <p class="component-description">
+              The Spinner component provides a Windows 98-style loading indicator that shows when content is being loaded or a process is running.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <span class="code-keyword">import</span> { Spinner } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Spinner</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div class="spinner" style="width: 24px; height: 24px; border: 2px solid var(--win98-navy); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                  <span>Loading...</span>
+                </div>
+                <div class="example-code">
+                  &lt;Spinner /&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Spinner with Custom Size</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div class="spinner" style="width: 40px; height: 40px; border: 3px solid var(--win98-navy); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                  <span>Loading...</span>
+                </div>
+                <div class="example-code">
+                  &lt;Spinner size=<span class="code-string">"large"</span> /&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Spinner</div>
+              </div>
+              <div class="example-content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div class="spinner" style="width: 24px; height: 24px; border: 2px solid var(--win98-hot-pink); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite, wiggle 1s infinite;"></div>
+                  <span>Loading...</span>
+                </div>
+                <div class="example-code">
+                  &lt;Spinner rohitMode /&gt;
+                </div>
+                <p><em>Note: In Rohit Mode, the spinner will wiggle, change color, and sometimes spin in the wrong direction.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>size</td>
+                  <td>'small' | 'medium' | 'large'</td>
+                  <td>'medium'</td>
+                  <td>Size of the spinner</td>
+                </tr>
+                <tr>
+                  <td>color</td>
+                  <td>string</td>
+                  <td>var(--win98-navy)</td>
+                  <td>Color of the spinner</td>
+                </tr>
+                <tr>
+                  <td>speed</td>
+                  <td>number</td>
+                  <td>1</td>
+                  <td>Speed of the spinner animation in seconds</td>
+                </tr>
+                <tr>
+                  <td>className</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>CSS class to apply to the spinner</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Spinner component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <span class="code-keyword">import</span> { Spinner } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              
+              <span class="code-keyword">const</span> CustomSpinner = styled(Spinner)`
+                border-width: 4px;
+                border-style: dashed;
+                animation: spin 2s linear infinite, rainbow 3s linear infinite;
+                
+                @keyframes rainbow {
+                  0% { border-color: red; }
+                  33% { border-color: green; }
+                  66% { border-color: blue; }
+                  100% { border-color: red; }
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> &lt;CustomSpinner /&gt;;
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Spinner component will:</p>
+            <ul>
+              <li>Wiggle or bounce while spinning</li>
+              <li>Change color periodically</li>
+              <li>Sometimes spin in the wrong direction</li>
+              <li>Occasionally stop and start spinning randomly</li>
+              <li>Draw unnecessary attention to itself</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes wiggle {
+      0% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(-5deg) scale(1.1); }
+      75% { transform: rotate(5deg) scale(0.9); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+  </style>
+</body>
+</html> 

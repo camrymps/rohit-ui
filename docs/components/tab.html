@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alert Component - Rohit UI</title>
+  <title>Tabs Component - Rohit UI</title>
   <link rel="stylesheet" href="../assets/docs.css">
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 </head>
@@ -68,7 +68,7 @@
         <div class="window-header">
           <div class="window-title">
             <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
-            <span>Alert Component</span>
+            <span>Tabs Component</span>
           </div>
           <div class="window-controls">
             <div class="window-control">_</div>
@@ -78,16 +78,16 @@
         </div>
         <div class="window-content">
           <div class="component-header">
-            <h1 class="component-title">Alert</h1>
+            <h1 class="component-title">Tabs</h1>
             <p class="component-description">
-              The Alert component provides a Windows 98-style alert box for displaying important messages or notifications to users.
+              The Tabs component provides a Windows 98-style tabbed interface for organizing content into multiple sections.
             </p>
           </div>
 
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <span class="code-keyword">import</span> { Tabs } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
             </div>
           </div>
 
@@ -95,91 +95,87 @@
             <h2 class="section-title">Examples</h2>
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Basic Alert</div>
+                <div class="example-title">Basic Tabs</div>
               </div>
               <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
-                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
-                    <img src="../assets/images/win98-logo.png" alt="Win98 Logo" width="16" height="16" style="margin-right: 6px;">Alert
+                <div style="border: 1px solid var(--win98-black); background: var(--win98-silver);">
+                  <div style="display: flex; border-bottom: 1px solid var(--win98-black);">
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black);">Tab 1</div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black);">Tab 2</div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver);">Tab 3</div>
                   </div>
-                  <div style="padding: 16px;">
-                    <p>This is an important message.</p>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-                      <button class="win98-button">OK</button>
-                    </div>
-                  </div>
+                  <div style="padding: 16px;">Content for Tab 1</div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"Alert"</span>
-                    message=<span class="code-string">"This is an important message."</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  /&gt;
+                  &lt;Tabs&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Tab 1"</span>&gt;
+                      Content for Tab 1
+                    &lt;/Tabs.Tab&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Tab 2"</span>&gt;
+                      Content for Tab 2
+                    &lt;/Tabs.Tab&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Tab 3"</span>&gt;
+                      Content for Tab 3
+                    &lt;/Tabs.Tab&gt;
+                  &lt;/Tabs&gt;
                 </div>
               </div>
             </div>
 
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Alert with Custom Icon</div>
+                <div class="example-title">Tabs with Icons</div>
               </div>
               <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
-                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
-                    <span style="margin-right: 6px;">⚠️</span>Warning
-                  </div>
-                  <div style="padding: 16px;">
-                    <p>This action cannot be undone.</p>
-                    <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px;">
-                      <button class="win98-button">Cancel</button>
-                      <button class="win98-button">Continue</button>
+                <div style="border: 1px solid var(--win98-black); background: var(--win98-silver);">
+                  <div style="display: flex; border-bottom: 1px solid var(--win98-black);">
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black); display: flex; align-items: center;">
+                      <span style="margin-right: 6px;">📁</span>Files
+                    </div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black); display: flex; align-items: center;">
+                      <span style="margin-right: 6px;">⚙️</span>Settings
+                    </div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver); display: flex; align-items: center;">
+                      <span style="margin-right: 6px;">ℹ️</span>About
                     </div>
                   </div>
+                  <div style="padding: 16px;">Files content</div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"Warning"</span>
-                    message=<span class="code-string">"This action cannot be undone."</span>
-                    icon=<span class="code-string">"⚠️"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                    buttons={[
-                      { text: 'Cancel', onClick: () => setIsOpen(false) },
-                      { text: 'Continue', onClick: handleContinue }
-                    ]}
-                  /&gt;
+                  &lt;Tabs&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Files"</span> icon=<span class="code-string">"📁"</span>&gt;
+                      Files content
+                    &lt;/Tabs.Tab&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Settings"</span> icon=<span class="code-string">"⚙️"</span>&gt;
+                      Settings content
+                    &lt;/Tabs.Tab&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"About"</span> icon=<span class="code-string">"ℹ️"</span>&gt;
+                      About content
+                    &lt;/Tabs.Tab&gt;
+                  &lt;/Tabs&gt;
                 </div>
               </div>
             </div>
 
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Rohit Mode Alert</div>
+                <div class="example-title">Rohit Mode Tabs</div>
               </div>
               <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-hot-pink); background: var(--win98-silver); box-shadow: 4px 4px 8px var(--win98-hot-pink); transform: rotate(-2deg);">
-                  <div style="background: var(--win98-hot-pink); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center; animation: wiggle 1s infinite;">
-                    <span style="margin-right: 6px;">🎉</span>UNNECESSARILY COMPLICATED
+                <div style="border: 1px solid var(--win98-hot-pink); background: var(--win98-silver); box-shadow: 4px 4px 8px var(--win98-hot-pink); transform: rotate(-2deg);">
+                  <div style="display: flex; border-bottom: 1px solid var(--win98-hot-pink);">
+                    <div style="padding: 4px 16px; background: var(--win98-hot-pink); color: white; border-right: 1px solid var(--win98-hot-pink); animation: wiggle 1s infinite;">UNNECESSARILY COMPLICATED</div>
                   </div>
-                  <div style="padding: 16px; color: var(--win98-hot-pink);">
-                    <p>This alert is unnecessarily complicated.</p>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-                      <button class="win98-button" style="border-color: var(--win98-hot-pink);">OK</button>
-                    </div>
-                  </div>
+                  <div style="padding: 16px; color: var(--win98-hot-pink);">This tab is unnecessarily complicated.</div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>
-                    message=<span class="code-string">"This alert is unnecessarily complicated."</span>
-                    icon=<span class="code-string">"🎉"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                    rohitMode
-                  /&gt;
+                  &lt;Tabs rohitMode&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>&gt;
+                      This tab is unnecessarily complicated.
+                    &lt;/Tabs.Tab&gt;
+                  &lt;/Tabs&gt;
                 </div>
-                <p><em>Note: In Rohit Mode, the alert will wiggle, change color, and sometimes randomly reposition itself.</em></p>
+                <p><em>Note: In Rohit Mode, the tabs will wiggle, change color, and sometimes randomly reorder themselves.</em></p>
               </div>
             </div>
           </div>
@@ -197,46 +193,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>title</td>
-                  <td>string</td>
-                  <td>'Alert'</td>
-                  <td>Title text displayed in the alert header</td>
+                  <td>defaultActiveTab</td>
+                  <td>number</td>
+                  <td>0</td>
+                  <td>Index of the initially active tab</td>
                 </tr>
                 <tr>
-                  <td>message</td>
-                  <td>string</td>
-                  <td>-</td>
-                  <td>Message text displayed in the alert body</td>
-                </tr>
-                <tr>
-                  <td>icon</td>
-                  <td>string</td>
-                  <td>-</td>
-                  <td>Icon to display in the alert header</td>
-                </tr>
-                <tr>
-                  <td>open</td>
-                  <td>boolean</td>
-                  <td>false</td>
-                  <td>Whether the alert is visible</td>
-                </tr>
-                <tr>
-                  <td>onClose</td>
+                  <td>onTabChange</td>
                   <td>function</td>
                   <td>-</td>
-                  <td>Function called when the alert is closed</td>
-                </tr>
-                <tr>
-                  <td>buttons</td>
-                  <td>Array&lt;{text: string, onClick: function}&gt;</td>
-                  <td>[{text: 'OK'}]</td>
-                  <td>Custom buttons to display in the alert</td>
+                  <td>Function called when the active tab changes</td>
                 </tr>
                 <tr>
                   <td>className</td>
                   <td>string</td>
                   <td>-</td>
-                  <td>CSS class to apply to the alert container</td>
+                  <td>CSS class to apply to the tabs container</td>
                 </tr>
                 <tr>
                   <td>rohitMode</td>
@@ -246,34 +218,65 @@
                 </tr>
               </tbody>
             </table>
+
+            <h3>Tab Props</h3>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Title text for the tab</td>
+                </tr>
+                <tr>
+                  <td>icon</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Icon to display before the tab title</td>
+                </tr>
+                <tr>
+                  <td>disabled</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Whether the tab is disabled</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <div class="section">
             <h2 class="section-title">CSS Customization</h2>
-            <p>You can customize the Alert component using styled-components:</p>
+            <p>You can customize the Tabs component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <span class="code-keyword">import</span> { Tabs } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
               
-              <span class="code-keyword">const</span> CustomAlert = styled(Alert)`
+              <span class="code-keyword">const</span> CustomTabs = styled(Tabs)`
                 background: #f0f0f0;
-                .alert-header {
+                .tab-header {
                   background: purple;
                   color: white;
                 }
-                .alert-content {
+                .tab-content {
                   padding: 20px;
                 }
               `;
               
               <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
                 <span class="code-keyword">return</span> (
-                  &lt;CustomAlert
-                    title=<span class="code-string">"Custom Alert"</span>
-                    message=<span class="code-string">"Custom styled alert message."</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  /&gt;
+                  &lt;CustomTabs&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Custom Tab"</span>&gt;
+                      Custom styled content
+                    &lt;/Tabs.Tab&gt;
+                  &lt;/CustomTabs&gt;
                 );
               }
             </div>
@@ -281,11 +284,11 @@
 
           <div class="section">
             <h2 class="section-title">Rohit Mode Behavior</h2>
-            <p>When Rohit Mode is enabled, the Alert component will:</p>
+            <p>When Rohit Mode is enabled, the Tabs component will:</p>
             <ul>
               <li>Wiggle or bounce randomly</li>
               <li>Change color periodically</li>
-              <li>Sometimes randomly reposition itself</li>
+              <li>Sometimes randomly reorder the tabs</li>
               <li>Draw unnecessary attention to itself</li>
             </ul>
           </div>

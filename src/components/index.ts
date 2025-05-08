@@ -11,3 +11,4 @@ export * from "./Tab";
 export * from "./Dialog";
 export * from "./Accordion";
 export * from "./CodeBlock";
+export * from "./Marquee";

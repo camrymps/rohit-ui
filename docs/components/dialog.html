@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alert Component - Rohit UI</title>
+  <title>Dialog Component - Rohit UI</title>
   <link rel="stylesheet" href="../assets/docs.css">
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 </head>
@@ -68,7 +68,7 @@
         <div class="window-header">
           <div class="window-title">
             <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
-            <span>Alert Component</span>
+            <span>Dialog Component</span>
           </div>
           <div class="window-controls">
             <div class="window-control">_</div>
@@ -78,16 +78,16 @@
         </div>
         <div class="window-content">
           <div class="component-header">
-            <h1 class="component-title">Alert</h1>
+            <h1 class="component-title">Dialog</h1>
             <p class="component-description">
-              The Alert component provides a Windows 98-style alert box for displaying important messages or notifications to users.
+              The Dialog component provides a Windows 98-style modal dialog box for displaying important messages or collecting user input.
             </p>
           </div>
 
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <span class="code-keyword">import</span> { Dialog } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
             </div>
           </div>
 
@@ -95,91 +95,120 @@
             <h2 class="section-title">Examples</h2>
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Basic Alert</div>
+                <div class="example-title">Basic Dialog</div>
               </div>
               <div class="example-content">
                 <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
                   <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
-                    <img src="../assets/images/win98-logo.png" alt="Win98 Logo" width="16" height="16" style="margin-right: 6px;">Alert
+                    <img src="../assets/images/win98-logo.png" alt="Win98 Logo" width="16" height="16" style="margin-right: 6px;">Dialog Title
                   </div>
                   <div style="padding: 16px;">
-                    <p>This is an important message.</p>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-                      <button class="win98-button">OK</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"Alert"</span>
-                    message=<span class="code-string">"This is an important message."</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  /&gt;
-                </div>
-              </div>
-            </div>
-
-            <div class="example">
-              <div class="example-header">
-                <div class="example-title">Alert with Custom Icon</div>
-              </div>
-              <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
-                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
-                    <span style="margin-right: 6px;">⚠️</span>Warning
-                  </div>
-                  <div style="padding: 16px;">
-                    <p>This action cannot be undone.</p>
+                    <p>This is a basic dialog box.</p>
                     <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px;">
+                      <button class="win98-button">OK</button>
                       <button class="win98-button">Cancel</button>
-                      <button class="win98-button">Continue</button>
                     </div>
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"Warning"</span>
-                    message=<span class="code-string">"This action cannot be undone."</span>
-                    icon=<span class="code-string">"⚠️"</span>
+                  &lt;Dialog
+                    title=<span class="code-string">"Dialog Title"</span>
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
-                    buttons={[
-                      { text: 'Cancel', onClick: () => setIsOpen(false) },
-                      { text: 'Continue', onClick: handleContinue }
-                    ]}
-                  /&gt;
+                  &gt;
+                    &lt;p&gt;This is a basic dialog box.&lt;/p&gt;
+                    &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
+                      &lt;Button onClick={() => setIsOpen(false)}&gt;OK&lt;/Button&gt;
+                      &lt;Button onClick={() => setIsOpen(false)}&gt;Cancel&lt;/Button&gt;
+                    &lt;/div&gt;
+                  &lt;/Dialog&gt;
                 </div>
               </div>
             </div>
 
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Rohit Mode Alert</div>
+                <div class="example-title">Dialog with Form</div>
+              </div>
+              <div class="example-content">
+                <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
+                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
+                    <img src="../assets/images/win98-logo.png" alt="Win98 Logo" width="16" height="16" style="margin-right: 6px;">Save File
+                  </div>
+                  <div style="padding: 16px;">
+                    <div style="margin-bottom: 8px;">
+                      <label style="display: block; margin-bottom: 4px;">File name:</label>
+                      <input type="text" class="win98-input" value="document.txt" style="width: 100%;">
+                    </div>
+                    <div style="margin-bottom: 8px;">
+                      <label style="display: block; margin-bottom: 4px;">Save as type:</label>
+                      <select class="win98-select" style="width: 100%;">
+                        <option>Text Document (*.txt)</option>
+                        <option>All Files (*.*)</option>
+                      </select>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px;">
+                      <button class="win98-button">Save</button>
+                      <button class="win98-button">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="example-code">
+                  &lt;Dialog
+                    title=<span class="code-string">"Save File"</span>
+                    open={isOpen}
+                    onClose={() => setIsOpen(false)}
+                  &gt;
+                    &lt;div&gt;
+                      &lt;label&gt;File name:&lt;/label&gt;
+                      &lt;TextField defaultValue=<span class="code-string">"document.txt"</span> /&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                      &lt;label&gt;Save as type:&lt;/label&gt;
+                      &lt;Select&gt;
+                        &lt;option&gt;Text Document (*.txt)&lt;/option&gt;
+                        &lt;option&gt;All Files (*.*)&lt;/option&gt;
+                      &lt;/Select&gt;
+                    &lt;/div&gt;
+                    &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
+                      &lt;Button onClick={handleSave}&gt;Save&lt;/Button&gt;
+                      &lt;Button onClick={() => setIsOpen(false)}&gt;Cancel&lt;/Button&gt;
+                    &lt;/div&gt;
+                  &lt;/Dialog&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Dialog</div>
               </div>
               <div class="example-content">
                 <div style="width: 300px; border: 1px solid var(--win98-hot-pink); background: var(--win98-silver); box-shadow: 4px 4px 8px var(--win98-hot-pink); transform: rotate(-2deg);">
                   <div style="background: var(--win98-hot-pink); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center; animation: wiggle 1s infinite;">
-                    <span style="margin-right: 6px;">🎉</span>UNNECESSARILY COMPLICATED
+                    <img src="../assets/images/win98-logo.png" alt="Win98 Logo" width="16" height="16" style="margin-right: 6px;">UNNECESSARILY COMPLICATED
                   </div>
                   <div style="padding: 16px; color: var(--win98-hot-pink);">
-                    <p>This alert is unnecessarily complicated.</p>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+                    <p>This dialog is unnecessarily complicated.</p>
+                    <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px;">
                       <button class="win98-button" style="border-color: var(--win98-hot-pink);">OK</button>
                     </div>
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
+                  &lt;Dialog
                     title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>
-                    message=<span class="code-string">"This alert is unnecessarily complicated."</span>
-                    icon=<span class="code-string">"🎉"</span>
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
                     rohitMode
-                  /&gt;
+                  &gt;
+                    &lt;p&gt;This dialog is unnecessarily complicated.&lt;/p&gt;
+                    &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
+                      &lt;Button onClick={() => setIsOpen(false)}&gt;OK&lt;/Button&gt;
+                    &lt;/div&gt;
+                  &lt;/Dialog&gt;
                 </div>
-                <p><em>Note: In Rohit Mode, the alert will wiggle, change color, and sometimes randomly reposition itself.</em></p>
+                <p><em>Note: In Rohit Mode, the dialog will wiggle, change color, and sometimes randomly reposition itself.</em></p>
               </div>
             </div>
           </div>
@@ -199,44 +228,32 @@
                 <tr>
                   <td>title</td>
                   <td>string</td>
-                  <td>'Alert'</td>
-                  <td>Title text displayed in the alert header</td>
-                </tr>
-                <tr>
-                  <td>message</td>
-                  <td>string</td>
                   <td>-</td>
-                  <td>Message text displayed in the alert body</td>
-                </tr>
-                <tr>
-                  <td>icon</td>
-                  <td>string</td>
-                  <td>-</td>
-                  <td>Icon to display in the alert header</td>
+                  <td>Title text displayed in the dialog header</td>
                 </tr>
                 <tr>
                   <td>open</td>
                   <td>boolean</td>
                   <td>false</td>
-                  <td>Whether the alert is visible</td>
+                  <td>Whether the dialog is visible</td>
                 </tr>
                 <tr>
                   <td>onClose</td>
                   <td>function</td>
                   <td>-</td>
-                  <td>Function called when the alert is closed</td>
+                  <td>Function called when the dialog is closed</td>
                 </tr>
                 <tr>
-                  <td>buttons</td>
-                  <td>Array&lt;{text: string, onClick: function}&gt;</td>
-                  <td>[{text: 'OK'}]</td>
-                  <td>Custom buttons to display in the alert</td>
+                  <td>children</td>
+                  <td>ReactNode</td>
+                  <td>-</td>
+                  <td>Content of the dialog</td>
                 </tr>
                 <tr>
                   <td>className</td>
                   <td>string</td>
                   <td>-</td>
-                  <td>CSS class to apply to the alert container</td>
+                  <td>CSS class to apply to the dialog container</td>
                 </tr>
                 <tr>
                   <td>rohitMode</td>
@@ -250,30 +267,31 @@
 
           <div class="section">
             <h2 class="section-title">CSS Customization</h2>
-            <p>You can customize the Alert component using styled-components:</p>
+            <p>You can customize the Dialog component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <span class="code-keyword">import</span> { Dialog } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
               
-              <span class="code-keyword">const</span> CustomAlert = styled(Alert)`
+              <span class="code-keyword">const</span> CustomDialog = styled(Dialog)`
                 background: #f0f0f0;
-                .alert-header {
+                .dialog-header {
                   background: purple;
                   color: white;
                 }
-                .alert-content {
+                .dialog-content {
                   padding: 20px;
                 }
               `;
               
               <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
                 <span class="code-keyword">return</span> (
-                  &lt;CustomAlert
-                    title=<span class="code-string">"Custom Alert"</span>
-                    message=<span class="code-string">"Custom styled alert message."</span>
+                  &lt;CustomDialog
+                    title=<span class="code-string">"Custom Dialog"</span>
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
-                  /&gt;
+                  &gt;
+                    &lt;p&gt;Custom styled dialog content.&lt;/p&gt;
+                  &lt;/CustomDialog&gt;
                 );
               }
             </div>
@@ -281,7 +299,7 @@
 
           <div class="section">
             <h2 class="section-title">Rohit Mode Behavior</h2>
-            <p>When Rohit Mode is enabled, the Alert component will:</p>
+            <p>When Rohit Mode is enabled, the Dialog component will:</p>
             <ul>
               <li>Wiggle or bounce randomly</li>
               <li>Change color periodically</li>

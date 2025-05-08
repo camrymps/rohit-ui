@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alert Component - Rohit UI</title>
+  <title>CodeBlock Component - Rohit UI</title>
   <link rel="stylesheet" href="../assets/docs.css">
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 </head>
@@ -68,7 +68,7 @@
         <div class="window-header">
           <div class="window-title">
             <img src="../assets/images/win98-logo.png" alt="Win98 Logo" class="window-icon" width="16" height="16">
-            <span>Alert Component</span>
+            <span>CodeBlock Component</span>
           </div>
           <div class="window-controls">
             <div class="window-control">_</div>
@@ -78,16 +78,16 @@
         </div>
         <div class="window-content">
           <div class="component-header">
-            <h1 class="component-title">Alert</h1>
+            <h1 class="component-title">CodeBlock</h1>
             <p class="component-description">
-              The Alert component provides a Windows 98-style alert box for displaying important messages or notifications to users.
+              The CodeBlock component provides a Windows 98-style code block for displaying formatted code snippets with syntax highlighting.
             </p>
           </div>
 
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <span class="code-keyword">import</span> { CodeBlock } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
             </div>
           </div>
 
@@ -95,26 +95,25 @@
             <h2 class="section-title">Examples</h2>
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Basic Alert</div>
+                <div class="example-title">Basic CodeBlock</div>
               </div>
               <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
-                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
-                    <img src="../assets/images/win98-logo.png" alt="Win98 Logo" width="16" height="16" style="margin-right: 6px;">Alert
+                <div style="border: 1px solid var(--win98-black); background: var(--win98-silver);">
+                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center; justify-content: space-between;">
+                    <span>example.js</span>
+                    <button class="win98-button" style="padding: 2px 8px; font-size: 12px;">Copy</button>
                   </div>
-                  <div style="padding: 16px;">
-                    <p>This is an important message.</p>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-                      <button class="win98-button">OK</button>
-                    </div>
-                  </div>
+                  <pre style="margin: 0; padding: 16px; background: #1e1e1e; color: #d4d4d4; overflow-x: auto; font-family: monospace;">
+<span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">greet</span>(<span style="color: #9cdcfe;">name</span>) {
+  <span style="color: #569cd6;">return</span> <span style="color: #ce9178;">`Hello, ${name}!`</span>;
+}</pre>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"Alert"</span>
-                    message=<span class="code-string">"This is an important message."</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
+                  &lt;CodeBlock
+                    language=<span class="code-string">"javascript"</span>
+                    code={<span class="code-string">`function greet(name) {
+  return \`Hello, \${name}!\`;
+}`</span>}
                   /&gt;
                 </div>
               </div>
@@ -122,32 +121,26 @@
 
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Alert with Custom Icon</div>
+                <div class="example-title">CodeBlock with Line Numbers</div>
               </div>
               <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-black); background: var(--win98-silver); box-shadow: 4px 4px 8px rgba(0,0,0,0.15);">
-                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center;">
-                    <span style="margin-right: 6px;">⚠️</span>Warning
+                <div style="border: 1px solid var(--win98-black); background: var(--win98-silver);">
+                  <div style="background: var(--win98-navy); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center; justify-content: space-between;">
+                    <span>example.js</span>
+                    <button class="win98-button" style="padding: 2px 8px; font-size: 12px;">Copy</button>
                   </div>
-                  <div style="padding: 16px;">
-                    <p>This action cannot be undone.</p>
-                    <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px;">
-                      <button class="win98-button">Cancel</button>
-                      <button class="win98-button">Continue</button>
-                    </div>
-                  </div>
+                  <pre style="margin: 0; padding: 16px; background: #1e1e1e; color: #d4d4d4; overflow-x: auto; font-family: monospace; display: flex;">
+<span style="color: #858585; margin-right: 16px; user-select: none;">1</span><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">greet</span>(<span style="color: #9cdcfe;">name</span>) {
+<span style="color: #858585; margin-right: 16px; user-select: none;">2</span>  <span style="color: #569cd6;">return</span> <span style="color: #ce9178;">`Hello, ${name}!`</span>;
+<span style="color: #858585; margin-right: 16px; user-select: none;">3</span>}</pre>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"Warning"</span>
-                    message=<span class="code-string">"This action cannot be undone."</span>
-                    icon=<span class="code-string">"⚠️"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                    buttons={[
-                      { text: 'Cancel', onClick: () => setIsOpen(false) },
-                      { text: 'Continue', onClick: handleContinue }
-                    ]}
+                  &lt;CodeBlock
+                    language=<span class="code-string">"javascript"</span>
+                    code={<span class="code-string">`function greet(name) {
+  return \`Hello, \${name}!\`;
+}`</span>}
+                    showLineNumbers
                   /&gt;
                 </div>
               </div>
@@ -155,31 +148,31 @@
 
             <div class="example">
               <div class="example-header">
-                <div class="example-title">Rohit Mode Alert</div>
+                <div class="example-title">Rohit Mode CodeBlock</div>
               </div>
               <div class="example-content">
-                <div style="width: 300px; border: 1px solid var(--win98-hot-pink); background: var(--win98-silver); box-shadow: 4px 4px 8px var(--win98-hot-pink); transform: rotate(-2deg);">
-                  <div style="background: var(--win98-hot-pink); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center; animation: wiggle 1s infinite;">
-                    <span style="margin-right: 6px;">🎉</span>UNNECESSARILY COMPLICATED
+                <div style="border: 1px solid var(--win98-hot-pink); background: var(--win98-silver); box-shadow: 4px 4px 8px var(--win98-hot-pink); transform: rotate(-2deg);">
+                  <div style="background: var(--win98-hot-pink); color: white; padding: 4px 8px; font-weight: bold; display: flex; align-items: center; justify-content: space-between; animation: wiggle 1s infinite;">
+                    <span>UNNECESSARILY COMPLICATED.js</span>
+                    <button class="win98-button" style="padding: 2px 8px; font-size: 12px; border-color: var(--win98-hot-pink);">Copy</button>
                   </div>
-                  <div style="padding: 16px; color: var(--win98-hot-pink);">
-                    <p>This alert is unnecessarily complicated.</p>
-                    <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-                      <button class="win98-button" style="border-color: var(--win98-hot-pink);">OK</button>
-                    </div>
-                  </div>
+                  <pre style="margin: 0; padding: 16px; background: #1e1e1e; color: var(--win98-hot-pink); overflow-x: auto; font-family: monospace;">
+<span style="color: var(--win98-hot-pink);">// This code is unnecessarily complicated</span>
+<span style="color: var(--win98-hot-pink);">function</span> <span style="color: var(--win98-hot-pink);">complicated</span>() {
+  <span style="color: var(--win98-hot-pink);">return</span> <span style="color: var(--win98-hot-pink);">"UNNECESSARILY COMPLICATED"</span>;
+}</pre>
                 </div>
                 <div class="example-code">
-                  &lt;Alert
-                    title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>
-                    message=<span class="code-string">"This alert is unnecessarily complicated."</span>
-                    icon=<span class="code-string">"🎉"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
+                  &lt;CodeBlock
+                    language=<span class="code-string">"javascript"</span>
+                    code={<span class="code-string">`// This code is unnecessarily complicated
+function complicated() {
+  return "UNNECESSARILY COMPLICATED";
+}`</span>}
                     rohitMode
                   /&gt;
                 </div>
-                <p><em>Note: In Rohit Mode, the alert will wiggle, change color, and sometimes randomly reposition itself.</em></p>
+                <p><em>Note: In Rohit Mode, the code block will wiggle, change color, and sometimes randomly reorder its lines.</em></p>
               </div>
             </div>
           </div>
@@ -197,46 +190,40 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>title</td>
-                  <td>string</td>
-                  <td>'Alert'</td>
-                  <td>Title text displayed in the alert header</td>
-                </tr>
-                <tr>
-                  <td>message</td>
+                  <td>code</td>
                   <td>string</td>
                   <td>-</td>
-                  <td>Message text displayed in the alert body</td>
+                  <td>The code to display</td>
                 </tr>
                 <tr>
-                  <td>icon</td>
+                  <td>language</td>
                   <td>string</td>
-                  <td>-</td>
-                  <td>Icon to display in the alert header</td>
+                  <td>'text'</td>
+                  <td>Programming language for syntax highlighting</td>
                 </tr>
                 <tr>
-                  <td>open</td>
+                  <td>showLineNumbers</td>
                   <td>boolean</td>
                   <td>false</td>
-                  <td>Whether the alert is visible</td>
+                  <td>Whether to display line numbers</td>
                 </tr>
                 <tr>
-                  <td>onClose</td>
+                  <td>showCopyButton</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Whether to show the copy button</td>
+                </tr>
+                <tr>
+                  <td>onCopy</td>
                   <td>function</td>
                   <td>-</td>
-                  <td>Function called when the alert is closed</td>
-                </tr>
-                <tr>
-                  <td>buttons</td>
-                  <td>Array&lt;{text: string, onClick: function}&gt;</td>
-                  <td>[{text: 'OK'}]</td>
-                  <td>Custom buttons to display in the alert</td>
+                  <td>Function called when code is copied</td>
                 </tr>
                 <tr>
                   <td>className</td>
                   <td>string</td>
                   <td>-</td>
-                  <td>CSS class to apply to the alert container</td>
+                  <td>CSS class to apply to the code block container</td>
                 </tr>
                 <tr>
                   <td>rohitMode</td>
@@ -250,29 +237,27 @@
 
           <div class="section">
             <h2 class="section-title">CSS Customization</h2>
-            <p>You can customize the Alert component using styled-components:</p>
+            <p>You can customize the CodeBlock component using styled-components:</p>
             <div class="example-code">
               <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <span class="code-keyword">import</span> { CodeBlock } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
               
-              <span class="code-keyword">const</span> CustomAlert = styled(Alert)`
+              <span class="code-keyword">const</span> CustomCodeBlock = styled(CodeBlock)`
                 background: #f0f0f0;
-                .alert-header {
+                .code-header {
                   background: purple;
                   color: white;
                 }
-                .alert-content {
-                  padding: 20px;
+                .code-content {
+                  font-family: 'Comic Sans MS', monospace;
                 }
               `;
               
               <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
                 <span class="code-keyword">return</span> (
-                  &lt;CustomAlert
-                    title=<span class="code-string">"Custom Alert"</span>
-                    message=<span class="code-string">"Custom styled alert message."</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
+                  &lt;CustomCodeBlock
+                    language=<span class="code-string">"javascript"</span>
+                    code={<span class="code-string">"console.log('Custom styled code block');"</span>}
                   /&gt;
                 );
               }
@@ -281,11 +266,11 @@
 
           <div class="section">
             <h2 class="section-title">Rohit Mode Behavior</h2>
-            <p>When Rohit Mode is enabled, the Alert component will:</p>
+            <p>When Rohit Mode is enabled, the CodeBlock component will:</p>
             <ul>
               <li>Wiggle or bounce randomly</li>
               <li>Change color periodically</li>
-              <li>Sometimes randomly reposition itself</li>
+              <li>Sometimes randomly reorder its lines</li>
               <li>Draw unnecessary attention to itself</li>
             </ul>
           </div>
