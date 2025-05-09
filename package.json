@@ -8,6 +8,18 @@
   "main": "dist/rohit-ui.umd.js",
   "module": "dist/rohit-ui.es.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/rohit-ui.es.js",
+      "require": "./dist/rohit-ui.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./theme": {
+      "import": "./dist/theme/index.js",
+      "require": "./dist/theme/index.js",
+      "types": "./dist/theme/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],

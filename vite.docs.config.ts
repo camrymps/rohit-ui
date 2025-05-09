@@ -8,6 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "rohit-ui": path.resolve(__dirname, "./src/lib"),
+      src: path.resolve(__dirname, "./src"),
     },
   },
   build: {
@@ -16,5 +18,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  root: path.resolve(__dirname, "src/docs"),
+  root: path.resolve(__dirname, "docs"),
 });

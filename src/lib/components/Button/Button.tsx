@@ -1,6 +1,7 @@
 import React from 'react';
 import type { ButtonHTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
+import type { RohitUITheme } from '../../theme/theme';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
@@ -10,7 +11,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   rohitMode?: boolean; // Easter egg mode that adds silly animations
 }
 
-const ButtonStyled = styled.button<ButtonProps>`
+const ButtonStyled = styled.button<ButtonProps & { theme: RohitUITheme }>`
   font-family: ${({ theme }) => theme.fonts.main};
   font-size: 14px;
   padding: ${({ size }) => {

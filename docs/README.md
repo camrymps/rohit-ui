@@ -1,33 +1,56 @@
 # Rohit UI Documentation
 
-This folder contains the documentation for the Rohit UI component library, a Windows 98-styled React UI kit with a humorous twist.
+This is the documentation website for Rohit UI, a Windows 98-style UI component library for React.
 
-## Structure
+## Development
 
-- `index.html` - Main documentation page
-- `getting-started.html` - Installation and usage guide
-- `themes.html` - Theme documentation and customization
-- `/components/` - Individual component documentation
-- `/assets/` - CSS, images, and other assets
+1. Install dependencies:
 
-## Component Documentation
+   ```bash
+   npm install
+   ```
 
-Each component documentation page includes:
+2. Start the development server:
 
-1. Import instructions
-2. Usage examples with code snippets
-3. Props table
-4. CSS customization guidance
-5. "Rohit Mode" behavior description
+   ```bash
+   npm run dev
+   ```
 
-## Local Development
+3. Build for production:
 
-To view the documentation locally, simply open any HTML file in your browser.
+   ```bash
+   npm run build
+   ```
 
-## Deployment
+4. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
 
-This documentation is designed to be deployed to GitHub Pages.
+## Project Structure
 
-## Notes
+- `src/` - Source code
+  - `components/` - Shared components and component documentation
+  - `pages/` - Page components
+  - `styles/` - Global styles
+  - `types/` - TypeScript type declarations
 
-The documentation includes a Windows 98-style CSS theme for an authentic retro experience. All examples show both standard usage and the special "Rohit Mode" that adds silly animations and behaviors.
+## Features
+
+- Windows 98-style UI components
+- Interactive examples
+- TypeScript support
+- Rohit Mode for enhanced styling
+- GitHub Pages deployment
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
