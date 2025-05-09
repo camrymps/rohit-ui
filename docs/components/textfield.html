@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextField Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            
+            <span>TextField Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">TextField</h1>
+            <p class="component-description">
+              The TextField component provides a classic Windows 98-style input for text entry.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic TextField</div>
+              </div>
+              <div class="example-content">
+                <input type="text" value="" placeholder="Type here..." style="border: 1px solid var(--win98-black); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px;">
+                <div class="example-code">
+                  <pre><code class="language-tsx">&lt;TextField placeholder="<span class="code-string">Type here...</span>" /&gt;</code></pre></div>
+              </div>
+            </div>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">TextField with Label</div>
+              </div>
+              <div class="example-content">
+                <label style="margin-right: 8px;">Name:</label>
+                <input type="text" value="Michael Scott" style="border: 1px solid var(--win98-black); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px;">
+                <div class="example-code">
+                  <pre><code class="language-tsx">&lt;TextField label="<span class="code-string">Name</span>" value="<span class="code-string">Michael Scott</span>" /&gt;</code></pre></div>
+              </div>
+            </div>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Disabled TextField</div>
+              </div>
+              <div class="example-content">
+                <input type="text" value="Can't touch this" disabled style="border: 1px solid var(--win98-black); background: var(--win98-silver); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px; opacity: 0.6;">
+                <div class="example-code">
+                  <pre><code class="language-tsx">&lt;TextField value="<span class="code-string">Can't touch this</span>" disabled /&gt;</code></pre></div>
+              </div>
+            </div>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">TextField with onChange Handler</div>
+              </div>
+              <div class="example-content">
+                <input type="text" value="Dynamic" style="border: 1px solid var(--win98-black); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px;">
+                <div class="example-code">
+                  <pre><code class="language-tsx"><span class="code-keyword">const</span> [value, setValue] = useState("<span class="code-string">Dynamic</span>");
+&lt;TextField value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;</code></pre></div>
+              </div>
+            </div>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode TextField</div>
+              </div>
+              <div class="example-content">
+                <input type="text" value="Why is this shaking?" style="border: 1px solid var(--win98-hot-pink); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px; animation: wiggle 1s infinite; color: var(--win98-hot-pink);">
+                <div class="example-code">
+                  <pre><code class="language-tsx">&lt;TextField value="<span class="code-string">Why is this shaking?</span>" rohitMode /&gt;</code></pre></div>
+                <p><em>Note: In Rohit Mode, the text field will wiggle, randomly change its value, and sometimes refuse to accept input.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>label</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Label text displayed next to the text field</td>
+                </tr>
+                <tr>
+                  <td>value</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Value of the text field</td>
+                </tr>
+                <tr>
+                  <td>placeholder</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Placeholder text</td>
+                </tr>
+                <tr>
+                  <td>disabled</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Disables the text field</td>
+                </tr>
+                <tr>
+                  <td>onChange</td>
+                  <td>function</td>
+                  <td>-</td>
+                  <td>Function called when the value changes</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the TextField component using styled-components:</p>
+            <div class="example-code">
+              <pre><code class="language-tsx"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Component } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomTextField = styled(TextField)`
+  border-color: purple;
+  color: purple;
+  font-weight: bold;
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;CustomTextField value="<span class="code-string">Custom</span>" /&gt;
+  );
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the TextField component will:</p>
+            <ul>
+              <li>Wiggle or bounce randomly</li>
+              <li>Change its value unexpectedly</li>
+              <li>Sometimes refuse to accept input</li>
+              <li>Draw unnecessary attention to itself</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</body>
+</html> 

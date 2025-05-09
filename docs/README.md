@@ -1,56 +1,33 @@
 # Rohit UI Documentation
 
-This is the documentation website for Rohit UI, a Windows 98-style UI component library for React.
+This folder contains the documentation for the Rohit UI component library, a Windows 98-styled React UI kit with a humorous twist.
 
-## Development
+## Structure
 
-1. Install dependencies:
+- `index.html` - Main documentation page
+- `getting-started.html` - Installation and usage guide
+- `themes.html` - Theme documentation and customization
+- `/components/` - Individual component documentation
+- `/assets/` - CSS, images, and other assets
 
-   ```bash
-   npm install
-   ```
+## Component Documentation
 
-2. Start the development server:
+Each component documentation page includes:
 
-   ```bash
-   npm run dev
-   ```
+1. Import instructions
+2. Usage examples with code snippets
+3. Props table
+4. CSS customization guidance
+5. "Rohit Mode" behavior description
 
-3. Build for production:
+## Local Development
 
-   ```bash
-   npm run build
-   ```
+To view the documentation locally, simply open any HTML file in your browser.
 
-4. Deploy to GitHub Pages:
-   ```bash
-   npm run deploy
-   ```
+## Deployment
 
-## Project Structure
+This documentation is designed to be deployed to GitHub Pages.
 
-- `src/` - Source code
-  - `components/` - Shared components and component documentation
-  - `pages/` - Page components
-  - `styles/` - Global styles
-  - `types/` - TypeScript type declarations
+## Notes
 
-## Features
-
-- Windows 98-style UI components
-- Interactive examples
-- TypeScript support
-- Rohit Mode for enhanced styling
-- GitHub Pages deployment
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+The documentation includes a Windows 98-style CSS theme for an authentic retro experience. All examples show both standard usage and the special "Rohit Mode" that adds silly animations and behaviors.

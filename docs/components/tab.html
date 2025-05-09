@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            
+            <span>Tabs Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Tabs</h1>
+            <p class="component-description">
+              The Tabs component provides a Windows 98-style tabbed interface for organizing content into multiple sections.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Tabs</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-black); background: var(--win98-silver);">
+                  <div style="display: flex; border-bottom: 1px solid var(--win98-black);">
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black);">Tab 1</div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black);">Tab 2</div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver);">Tab 3</div>
+                  </div>
+                  <div style="padding: 16px;">Content for Tab 1</div>
+                </div>
+                <div class="example-code">
+                  <pre><code class="language-tsx"><Tabs>
+                    <Tabs.Tab title=<span class="code-string">"Tab 1"</span>>
+                      Content for Tab 1
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"Tab 2"</span>>
+                      Content for Tab 2
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"Tab 3"</span>>
+                      Content for Tab 3
+                    </Tabs.Tab>
+                  </Tabs></code></pre></div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Tabs with Icons</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-black); background: var(--win98-silver);">
+                  <div style="display: flex; border-bottom: 1px solid var(--win98-black);">
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black); display: flex; align-items: center;">
+                      <span style="margin-right: 6px;">📁</span>Files
+                    </div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver); border-right: 1px solid var(--win98-black); display: flex; align-items: center;">
+                      <span style="margin-right: 6px;">⚙️</span>Settings
+                    </div>
+                    <div style="padding: 4px 16px; background: var(--win98-silver); display: flex; align-items: center;">
+                      <span style="margin-right: 6px;">ℹ️</span>About
+                    </div>
+                  </div>
+                  <div style="padding: 16px;">Files content</div>
+                </div>
+                <div class="example-code">
+                  <pre><code class="language-tsx"><Tabs>
+                    <Tabs.Tab title=<span class="code-string">"Files"</span> icon=<span class="code-string">"📁"</span>>
+                      Files content
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"Settings"</span> icon=<span class="code-string">"⚙️"</span>>
+                      Settings content
+                    </Tabs.Tab>
+                    <Tabs.Tab title=<span class="code-string">"About"</span> icon=<span class="code-string">"ℹ️"</span>>
+                      About content
+                    </Tabs.Tab>
+                  </Tabs></code></pre></div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Tabs</div>
+              </div>
+              <div class="example-content">
+                <div style="border: 1px solid var(--win98-hot-pink); background: var(--win98-silver); box-shadow: 4px 4px 8px var(--win98-hot-pink); transform: rotate(-2deg);">
+                  <div style="display: flex; border-bottom: 1px solid var(--win98-hot-pink);">
+                    <div style="padding: 4px 16px; background: var(--win98-hot-pink); color: white; border-right: 1px solid var(--win98-hot-pink); animation: wiggle 1s infinite;">UNNECESSARILY COMPLICATED</div>
+                  </div>
+                  <div style="padding: 16px; color: var(--win98-hot-pink);">This tab is unnecessarily complicated.</div>
+                </div>
+                <div class="example-code">
+                  <pre><code class="language-tsx"><Tabs rohitMode>
+                    <Tabs.Tab title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>>
+                      This tab is unnecessarily complicated.
+                    </Tabs.Tab>
+                  </Tabs></code></pre></div>
+                <p><em>Note: In Rohit Mode, the tabs will wiggle, change color, and sometimes randomly reorder themselves.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>defaultActiveTab</td>
+                  <td>number</td>
+                  <td>0</td>
+                  <td>Index of the initially active tab</td>
+                </tr>
+                <tr>
+                  <td>onTabChange</td>
+                  <td>function</td>
+                  <td>-</td>
+                  <td>Function called when the active tab changes</td>
+                </tr>
+                <tr>
+                  <td>className</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>CSS class to apply to the tabs container</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Tab Props</h3>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Title text for the tab</td>
+                </tr>
+                <tr>
+                  <td>icon</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>Icon to display before the tab title</td>
+                </tr>
+                <tr>
+                  <td>disabled</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Whether the tab is disabled</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Tabs component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              
+              <span class="code-keyword">const</span> CustomTabs = styled(Tabs)`
+                background: #f0f0f0;
+                .tab-header {
+                  background: purple;
+                  color: white;
+                }
+                .tab-content {
+                  padding: 20px;
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;CustomTabs&gt;
+                    &lt;Tabs.Tab title=<span class="code-string">"Custom Tab"</span>&gt;
+                      Custom styled content
+                    &lt;/Tabs.Tab&gt;
+                  &lt;/CustomTabs&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Tabs component will:</p>
+            <ul>
+              <li>Wiggle or bounce randomly</li>
+              <li>Change color periodically</li>
+              <li>Sometimes randomly reorder the tabs</li>
+              <li>Draw unnecessary attention to itself</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</body>
+</html> 

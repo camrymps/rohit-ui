@@ -18,6 +18,21 @@
       "import": "./dist/theme/index.js",
       "require": "./dist/theme/index.js",
       "types": "./dist/theme/index.d.ts"
+    },
+    "./components/Button": {
+      "import": "./dist/components/Button/index.js",
+      "require": "./dist/components/Button/index.js",
+      "types": "./dist/components/Button/index.d.ts"
+    },
+    "./components/Checkbox": {
+      "import": "./dist/components/Checkbox/index.js",
+      "require": "./dist/components/Checkbox/index.js",
+      "types": "./dist/components/Checkbox/index.d.ts"
+    },
+    "./components/Radio": {
+      "import": "./dist/components/Radio/index.js",
+      "require": "./dist/components/Radio/index.js",
+      "types": "./dist/components/Radio/index.d.ts"
     }
   },
   "files": [

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badge Component - Rohit UI</title>
+  <link rel="stylesheet" href="../assets/docs.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../getting-started.html">Getting Started</a></li>
+        <li><a href="../themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="button.html">Button</a></li>
+          <li><a href="checkbox.html">Checkbox</a></li>
+          <li><a href="radio.html">Radio</a></li>
+          <li><a href="textfield.html">TextField</a></li>
+          <li><a href="select.html">Select</a></li>
+          <li><a href="progressbar.html">ProgressBar</a></li>
+          <li><a href="window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="tooltip.html">Tooltip</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tab.html">Tabs</a></li>
+          <li><a href="dialog.html">Dialog</a></li>
+          <li><a href="accordion.html">Accordion</a></li>
+          <li><a href="codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="alert.html">Alert</a></li>
+          <li><a href="badge.html">Badge</a></li>
+          <li><a href="spinner.html">Spinner</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            
+            <span>Badge Component</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Badge</h1>
+            <p class="component-description">
+              The Badge component provides a Windows 98-style badge for displaying small pieces of information, such as notifications or status indicators.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Import</h2>
+            <div class="example-code">
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Examples</h2>
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Basic Badge</div>
+              </div>
+              <div class="example-content">
+                <div style="display: inline-block; position: relative;">
+                  <button class="win98-button">Notifications</button>
+                  <div style="position: absolute; top: -8px; right: -8px; background: var(--win98-navy); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">3</div>
+                </div>
+                <div class="example-code">
+                  &lt;Badge content=<span class="code-string">"3"</span>&gt;
+                    <pre><code class="language-tsx"><button>Notifications</button></code></pre>
+                  &lt;/Badge&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Badge with Custom Position</div>
+              </div>
+              <div class="example-content">
+                <div style="display: inline-block; position: relative;">
+                  <button class="win98-button">Settings</button>
+                  <div style="position: absolute; top: -8px; left: -8px; background: var(--win98-navy); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">!</div>
+                </div>
+                <div class="example-code">
+                  &lt;Badge content=<span class="code-string">"!"</span> position=<span class="code-string">"top-left"</span>&gt;
+                    <pre><code class="language-tsx"><button>Settings</button></code></pre>
+                  &lt;/Badge&gt;
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Mode Badge</div>
+              </div>
+              <div class="example-content">
+                <div style="display: inline-block; position: relative;">
+                  <button class="win98-button">Messages</button>
+                  <div style="position: absolute; top: -8px; right: -8px; background: var(--win98-hot-pink); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; animation: wiggle 1s infinite;">∞</div>
+                </div>
+                <div class="example-code">
+                  &lt;Badge content=<span class="code-string">"∞"</span> rohitMode&gt;
+                    <pre><code class="language-tsx"><button>Messages</button></code></pre>
+                  &lt;/Badge&gt;
+                </div>
+                <p><em>Note: In Rohit Mode, the badge will wiggle, change color, and sometimes randomly reposition itself.</em></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Props</h2>
+            <table class="props-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>content</td>
+                  <td>string | number</td>
+                  <td>-</td>
+                  <td>Content to display in the badge</td>
+                </tr>
+                <tr>
+                  <td>position</td>
+                  <td>'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'</td>
+                  <td>'top-right'</td>
+                  <td>Position of the badge relative to its children</td>
+                </tr>
+                <tr>
+                  <td>max</td>
+                  <td>number</td>
+                  <td>99</td>
+                  <td>Maximum value to display before showing max+</td>
+                </tr>
+                <tr>
+                  <td>showZero</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Whether to show the badge when content is 0</td>
+                </tr>
+                <tr>
+                  <td>children</td>
+                  <td>ReactNode</td>
+                  <td>-</td>
+                  <td>Element that the badge is attached to</td>
+                </tr>
+                <tr>
+                  <td>className</td>
+                  <td>string</td>
+                  <td>-</td>
+                  <td>CSS class to apply to the badge</td>
+                </tr>
+                <tr>
+                  <td>rohitMode</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Enables Rohit Mode with silly animations and behaviors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">CSS Customization</h2>
+            <p>You can customize the Badge component using styled-components:</p>
+            <div class="example-code">
+              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              
+              <span class="code-keyword">const</span> CustomBadge = styled(Badge)`
+                background: purple;
+                color: white;
+                .badge-content {
+                  font-family: 'Comic Sans MS', sans-serif;
+                }
+              `;
+              
+              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+                <span class="code-keyword">return</span> (
+                  &lt;CustomBadge content=<span class="code-string">"5"</span>&gt;
+                    <pre><code class="language-tsx"><button>Custom Badge</button></code></pre>
+                  &lt;/CustomBadge&gt;
+                );
+              }
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Rohit Mode Behavior</h2>
+            <p>When Rohit Mode is enabled, the Badge component will:</p>
+            <ul>
+              <li>Wiggle or bounce randomly</li>
+              <li>Change color periodically</li>
+              <li>Sometimes randomly reposition itself</li>
+              <li>Draw unnecessary attention to itself</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+
+  <style>
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</body>
+</html> 

@@ -9,6 +9,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.ts"),
       name: "RohitUI",
+      formats: ["es"],
       fileName: (format) => `rohit-ui.${format}.js`,
     },
     rollupOptions: {
@@ -21,6 +22,9 @@ export default defineConfig({
           "react-dom": "ReactDOM",
           "styled-components": "styled",
         },
+        // Ensure each component is built as a separate chunk
+        preserveModules: true,
+        preserveModulesRoot: "src/lib",
       },
     },
   },

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themes - Rohit UI</title>
+  <link rel="stylesheet" href="assets/docs.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-title">
+      Rohit UI
+    </div>
+    <div>
+      <a href="https://github.com/YourUsername/rohit-ui-v2" class="win98-button">View on GitHub</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="navigation">
+      <div class="nav-title">Documentation</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="getting-started.html">Getting Started</a></li>
+        <li><a href="themes.html">Themes</a></li>
+      </ul>
+      
+      <div class="nav-section">
+        <div class="nav-title">Basic Components</div>
+        <ul>
+          <li><a href="components/button.html">Button</a></li>
+          <li><a href="components/checkbox.html">Checkbox</a></li>
+          <li><a href="components/radio.html">Radio</a></li>
+          <li><a href="components/textfield.html">TextField</a></li>
+          <li><a href="components/select.html">Select</a></li>
+          <li><a href="components/progressbar.html">ProgressBar</a></li>
+          <li><a href="components/window.html">Window</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Advanced Components</div>
+        <ul>
+          <li><a href="components/tooltip.html">Tooltip</a></li>
+          <li><a href="components/menu.html">Menu</a></li>
+          <li><a href="components/tab.html">Tabs</a></li>
+          <li><a href="components/dialog.html">Dialog</a></li>
+          <li><a href="components/accordion.html">Accordion</a></li>
+          <li><a href="components/codeblock.html">CodeBlock</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <div class="nav-title">Additional Components</div>
+        <ul>
+          <li><a href="components/alert.html">Alert</a></li>
+          <li><a href="components/badge.html">Badge</a></li>
+          <li><a href="components/spinner.html">Spinner</a></li>
+          <li><a href="components/card.html">Card</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="window">
+        <div class="window-header">
+          <div class="window-title">
+            <span>Themes</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-control">_</div>
+            <div class="window-control">□</div>
+            <div class="window-control">✕</div>
+          </div>
+        </div>
+        <div class="window-content">
+          <div class="component-header">
+            <h1 class="component-title">Themes</h1>
+            <p class="component-description">
+              Learn how to customize the look and feel of Rohit UI components.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Built-in Themes</h2>
+            <p>Rohit UI comes with two built-in themes:</p>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Windows 98 Theme</div>
+              </div>
+              <div class="example-content">
+                <p>The default theme that recreates the classic Windows 98 look and feel.</p>
+                <div class="example-code">
+                  <pre><code class="language-tsx">&lt;<span class="code-tag">RohitUIProvider</span> <span class="code-attr-name">theme</span>=<span class="code-string">"windows98"</span>&gt;
+  <span class="code-comment">/* Your app */</span>
+&lt;/<span class="code-tag">RohitUIProvider</span>&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Rohit Special Theme</div>
+              </div>
+              <div class="example-content">
+                <p>A funky, colorful variation that adds unnecessary complexity to your UI.</p>
+                <div class="example-code">
+                  <pre><code class="language-tsx">&lt;<span class="code-tag">RohitUIProvider</span> <span class="code-attr-name">theme</span>=<span class="code-string">"rohitSpecial"</span>&gt;
+  <span class="code-comment">/* Your app */</span>
+&lt;/<span class="code-tag">RohitUIProvider</span>&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Custom Themes</h2>
+            <p>You can create your own custom theme by extending the default theme:</p>
+            <div class="example-code">
+              <pre><code class="language-tsx"><span class="code-keyword">import</span> { createTheme } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> myTheme = createTheme({
+  colors: {
+    primary: <span class="code-string">'#FF00FF'</span>,
+    secondary: <span class="code-string">'#00FFFF'</span>,
+    <span class="code-comment">// ... other color overrides</span>
+  },
+  fonts: {
+    family: {
+      base: <span class="code-string">"'Comic Sans MS', cursive"</span>,
+      <span class="code-comment">// ... other font overrides</span>
+    }
+  }
+});
+
+<span class="code-keyword">function</span> <span class="code-function">App</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">RohitUIProvider</span> <span class="code-attr-name">theme</span>={myTheme}&gt;
+      <span class="code-comment">/* Your app */</span>
+    &lt;/<span class="code-tag">RohitUIProvider</span>&gt;
+  );
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Theme Properties</h2>
+            <p>The theme object supports the following properties:</p>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Colors</div>
+              </div>
+              <div class="example-content">
+                <ul>
+                  <li><code>primary</code>: Primary brand color</li>
+                  <li><code>secondary</code>: Secondary brand color</li>
+                  <li><code>success</code>: Success state color</li>
+                  <li><code>error</code>: Error state color</li>
+                  <li><code>warning</code>: Warning state color</li>
+                  <li><code>info</code>: Information state color</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Typography</div>
+              </div>
+              <div class="example-content">
+                <ul>
+                  <li><code>fontFamily</code>: Font family for different text styles</li>
+                  <li><code>fontSize</code>: Font sizes for different text styles</li>
+                  <li><code>fontWeight</code>: Font weights for different text styles</li>
+                  <li><code>lineHeight</code>: Line heights for different text styles</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="example">
+              <div class="example-header">
+                <div class="example-title">Spacing</div>
+              </div>
+              <div class="example-content">
+                <ul>
+                  <li><code>spacing</code>: Spacing scale for margins and padding</li>
+                  <li><code>borderRadius</code>: Border radius values</li>
+                  <li><code>shadows</code>: Box shadow values</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2023 Rohit UI. All rights reserved. Created with ❤️ (and unnecessary complexity).
+  </footer>
+</body>
+</html> 

@@ -12,14 +12,16 @@ export interface CodeBlockProps {
 
 const CodeBlockContainer = styled.div`
   width: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.border.dark};
-  background-color: ${({ theme }) => theme.colors.background.main};
+  border: 2px solid ${({ theme }) => theme.colors.border.dark};
+  background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
+  box-shadow: ${({ theme }) => theme.shadows.outset};
+  margin: 1rem 0;
 `;
 
 const CodeBlockHeader = styled.div`
-  height: 25px;
+  height: 28px;
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   display: flex;
@@ -30,11 +32,13 @@ const CodeBlockHeader = styled.div`
   font-size: 12px;
   user-select: none;
   justify-content: space-between;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.border.dark};
 `;
 
 const CodeBlockTitle = styled.div`
   display: flex;
   align-items: center;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 `;
 
 const CodeBlockControls = styled.div`
@@ -43,21 +47,25 @@ const CodeBlockControls = styled.div`
 `;
 
 const CodeBlockButton = styled.button`
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background.main};
-  border: none;
+  border: 2px solid ${({ theme }) => theme.colors.border.dark};
   box-shadow: ${({ theme }) => theme.shadows.outset};
   cursor: pointer;
   font-family: ${({ theme }) => theme.fonts.main};
-  font-size: 10px;
+  font-size: 12px;
   padding: 0;
   
   &:active {
     box-shadow: ${({ theme }) => theme.shadows.inset};
+  }
+
+  &:hover {
+    filter: brightness(1.1);
   }
 `;
 
@@ -71,44 +79,83 @@ const Pre = styled.pre`
   background-color: #1e1e1e;
   color: #d4d4d4;
   max-height: 400px;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.background.main};
+    border: 1px solid ${({ theme }) => theme.colors.border.dark};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.background.main};
+    border: 1px solid ${({ theme }) => theme.colors.border.dark};
+    box-shadow: inset -1px -1px 0 ${({ theme }) => theme.colors.border.light},
+                inset 1px 1px 0 ${({ theme }) => theme.colors.border.dark};
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: ${({ theme }) => theme.colors.background.main};
+  }
 `;
 
 const Code = styled.code`
   font-family: inherit;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 const LineNumber = styled.span`
   display: inline-block;
-  width: 2em;
+  width: 3em;
   padding-right: 1em;
   text-align: right;
-  color: #606366;
+  color: #858585;
   user-select: none;
+  border-right: 1px solid #404040;
+  margin-right: 1em;
 `;
 
 const CommentSpan = styled.span`
-  color: #6a9955;
+  color: #6A9955;
+  font-style: italic;
 `;
 
 const KeywordSpan = styled.span`
-  color: #569cd6;
+  color: #569CD6;
+  font-weight: bold;
 `;
 
 const StringSpan = styled.span`
-  color: #ce9178;
+  color: #CE9178;
 `;
 
 const FunctionSpan = styled.span`
-  color: #dcdcaa;
+  color: #DCDCAA;
 `;
 
 const VariableSpan = styled.span`
-  color: #9cdcfe;
+  color: #9CDCFE;
+`;
+
+const NumberSpan = styled.span`
+  color: #B5CEA8;
+`;
+
+const OperatorSpan = styled.span`
+  color: #D4D4D4;
+`;
+
+const ClassSpan = styled.span`
+  color: #4EC9B0;
 `;
 
 const RohitComment = styled.span`
-  color: #ff00ff;
+  color: #FF69B4;
   font-style: italic;
+  text-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
 `;
 
 // Function to make Python code unnecessarily complicated
@@ -246,15 +293,10 @@ const highlightPython = (code: string, rohitMode: boolean): ReactElement[] => {
   const lines = code.split('\n');
   
   return lines.map((line, i) => {
-    // Store processed segments with their types and preserve whitespace
     const processedSegments: Array<{type: string | null; text: string}> = [];
-    
-    // First pass: Preserve all whitespaces by tokenizing the line
-    const tokens: string[] = [];
     let currentToken = '';
     let currentWhitespace = '';
     
-    // Helper to add current token and whitespace to tokens array
     const addCurrentToken = () => {
       if (currentToken) {
         if (currentWhitespace) {
@@ -266,23 +308,22 @@ const highlightPython = (code: string, rohitMode: boolean): ReactElement[] => {
       }
     };
     
+    const tokens: string[] = [];
+    
     // Tokenize the line character by character
     for (let j = 0; j < line.length; j++) {
       const char = line[j];
       
       if (/\s/.test(char)) {
-        // If whitespace, add current token and collect whitespace
         addCurrentToken();
         currentWhitespace += char;
       } else if (/[a-zA-Z0-9_]/.test(char)) {
-        // If alphanumeric or underscore, add to current token
         if (currentWhitespace) {
           tokens.push(currentWhitespace);
           currentWhitespace = '';
         }
         currentToken += char;
       } else {
-        // If special character, add current token and add special char as separate token
         addCurrentToken();
         if (currentWhitespace) {
           tokens.push(currentWhitespace);
@@ -292,7 +333,6 @@ const highlightPython = (code: string, rohitMode: boolean): ReactElement[] => {
       }
     }
     
-    // Add any remaining token or whitespace
     addCurrentToken();
     if (currentWhitespace) {
       tokens.push(currentWhitespace);
@@ -302,72 +342,82 @@ const highlightPython = (code: string, rohitMode: boolean): ReactElement[] => {
     for (let j = 0; j < tokens.length; j++) {
       const token = tokens[j];
       
-      // Skip empty tokens
       if (!token) continue;
       
-      // Check if token is whitespace
       if (/^\s+$/.test(token)) {
         processedSegments.push({type: null, text: token});
         continue;
       }
       
-      // Check if token is a keyword
+      // Keywords
       if (/^(import|from|def|class|if|elif|else|for|while|return|in|as|with|try|except|finally|raise|assert|and|or|not|is|lambda|None|True|False)$/.test(token)) {
         processedSegments.push({type: 'keyword', text: token});
         continue;
       }
       
-      // Check if token is the start of a string
+      // Numbers
+      if (/^-?\d*\.?\d+$/.test(token)) {
+        processedSegments.push({type: 'number', text: token});
+        continue;
+      }
+      
+      // Operators
+      if (/^[+\-*/%=<>!&|^~]+$/.test(token)) {
+        processedSegments.push({type: 'operator', text: token});
+        continue;
+      }
+      
+      // Class names (capitalized words)
+      if (/^[A-Z][a-zA-Z0-9]*$/.test(token)) {
+        processedSegments.push({type: 'class', text: token});
+        continue;
+      }
+      
+      // Strings
       if ((token === '"' || token === "'") && j < tokens.length - 1) {
-        // Simple case: look for matching quote that's not escaped
         let stringContent = token;
         let k = j + 1;
         let foundEnd = false;
         
         while (k < tokens.length) {
           stringContent += tokens[k];
-          
-          // Check if this token contains the closing quote
           if (tokens[k].endsWith(token) && !tokens[k].endsWith('\\' + token)) {
             foundEnd = true;
             break;
           }
-          
           k++;
         }
         
         if (foundEnd) {
           processedSegments.push({type: 'string', text: stringContent});
-          j = k; // Skip ahead
+          j = k;
           continue;
         }
       }
       
-      // Check if token is a function name (followed by open parenthesis)
+      // Function names
       if (j < tokens.length - 1 && tokens[j+1] === '(') {
         processedSegments.push({type: 'function', text: token});
         continue;
       }
       
-      // Check if token is a variable (followed by equals sign)
+      // Variables
       if (j < tokens.length - 2 && tokens[j+1].trim() === '' && tokens[j+2] === '=') {
         processedSegments.push({type: 'variable', text: token});
         continue;
       }
       
-      // Check if token is a comment
+      // Comments
       if (token === '#') {
-        // Combine all remaining tokens as part of the comment
         const commentText = tokens.slice(j).join('');
         processedSegments.push({type: 'comment', text: commentText});
-        break; // Comments extend to the end of the line
+        break;
       }
       
-      // Default: just add as plain text
       processedSegments.push({type: null, text: token});
     }
     
-    // Add Rohit comments randomly if rohitMode is enabled
+    // Add Rohit comments
     if (rohitMode && Math.random() < 0.1 && !line.includes('#')) {
       const rohitComments = [
         "# Rohit thinks this is elegant",
@@ -384,20 +434,27 @@ const highlightPython = (code: string, rohitMode: boolean): ReactElement[] => {
     
     // Convert segments to React elements
     const parts: ReactElement[] = processedSegments.map((segment, j) => {
-      if (segment.type === 'keyword') {
-        return <KeywordSpan key={j}>{segment.text}</KeywordSpan>;
-      } else if (segment.type === 'string') {
-        return <StringSpan key={j}>{segment.text}</StringSpan>;
-      } else if (segment.type === 'function') {
-        return <FunctionSpan key={j}>{segment.text}</FunctionSpan>;
-      } else if (segment.type === 'variable') {
-        return <VariableSpan key={j}>{segment.text}</VariableSpan>;
-      } else if (segment.type === 'comment') {
-        return <CommentSpan key={j}>{segment.text}</CommentSpan>;
-      } else if (segment.type === 'rohit') {
-        return <RohitComment key={j}>{segment.text}</RohitComment>;
-      } else {
-        return <span key={j}>{segment.text}</span>;
+      switch (segment.type) {
+        case 'keyword':
+          return <KeywordSpan key={j}>{segment.text}</KeywordSpan>;
+        case 'string':
+          return <StringSpan key={j}>{segment.text}</StringSpan>;
+        case 'function':
+          return <FunctionSpan key={j}>{segment.text}</FunctionSpan>;
+        case 'variable':
+          return <VariableSpan key={j}>{segment.text}</VariableSpan>;
+        case 'comment':
+          return <CommentSpan key={j}>{segment.text}</CommentSpan>;
+        case 'rohit':
+          return <RohitComment key={j}>{segment.text}</RohitComment>;
+        case 'number':
+          return <NumberSpan key={j}>{segment.text}</NumberSpan>;
+        case 'operator':
+          return <OperatorSpan key={j}>{segment.text}</OperatorSpan>;
+        case 'class':
+          return <ClassSpan key={j}>{segment.text}</ClassSpan>;
+        default:
+          return <span key={j}>{segment.text}</span>;
       }
     });
     
