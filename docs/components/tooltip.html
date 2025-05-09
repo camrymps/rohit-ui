@@ -217,24 +217,27 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Tooltip component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomTooltip = styled(Tooltip)`
-                background: #f0f0f0;
-                border-radius: 4px;
-                .tooltip-content {
-                  color: purple;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomTooltip content=<span class="code-string">"Custom tooltip"</span>&gt;
-                    <pre><code class="language-tsx">&lt;button&gt;Hover me&lt;/button&gt;</code></pre>
-                  &lt;/CustomTooltip&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Tooltip } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomTooltip = styled(Tooltip)`
+  .tooltip-content {
+    background: linear-gradient(45deg, var(--win98-navy), purple);
+    color: white;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: 'Comic Sans MS', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomTooltip</span> <span class="code-attr-name">text</span>=<span class="code-string">"Custom styled tooltip!"</span>&gt;
+      &lt;<span class="code-tag">button</span>&gt;Hover me&lt;/<span class="code-tag">button</span>&gt;
+    &lt;/<span class="code-tag">CustomTooltip</span>&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

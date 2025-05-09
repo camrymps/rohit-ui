@@ -245,30 +245,30 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Alert component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomAlert = styled(Alert)`
-                background: #f0f0f0;
-                .alert-header {
-                  background: purple;
-                  color: white;
-                }
-                .alert-content {
-                  padding: 20px;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomAlert
-                    title=<span class="code-string">"Custom Alert"</span>
-                    message=<span class="code-string">"Custom styled alert message."</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  /&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Alert } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomAlert = styled(Alert)`
+  background: #f0f0f0;
+  .alert-header {
+    background: purple;
+    color: white;
+  }
+  .alert-content {
+    padding: 20px;
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomAlert</span>
+      <span class="code-attr-name">title</span>=<span class="code-string">"Custom Alert"</span>
+      <span class="code-attr-name">message</span>=<span class="code-string">"Custom styled alert message."</span>
+      <span class="code-attr-name">open</span>={isOpen}
+      <span class="code-attr-name">onClose</span>={() => setIsOpen(false)}
+    /&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

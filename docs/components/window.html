@@ -216,25 +216,63 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Window component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomWindow = styled(Window)`
-                background: #f0f0f0;
-                border-radius: 8px;
-                .window-titlebar {
-                  background: purple;
-                  color: white;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomWindow title=<span class="code-string">"Custom Window"</span>&gt;
-                    <pre><code class="language-tsx"><p>This is a custom styled window.</p></code></pre>
-                  &lt;/CustomWindow&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Window } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomWindow = styled(Window)`
+  background: linear-gradient(to bottom, var(--win98-silver), white);
+  border: 3px solid var(--win98-navy);
+  border-radius: 8px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+  
+  .window-header {
+    background: linear-gradient(to right, var(--win98-navy), var(--win98-silver));
+    color: white;
+    padding: 12px 16px;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--win98-navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .window-controls {
+    display: flex;
+    gap: 4px;
+    
+    .window-control {
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--win98-black);
+      background: var(--win98-silver);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      
+      &:hover {
+        background: var(--win98-gray);
+      }
+    }
+  }
+  
+  .window-content {
+    padding: 24px;
+    background: white;
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomWindow</span>
+      <span class="code-attr-name">title</span>=<span class="code-string">"Custom Window"</span>
+      <span class="code-attr-name">onClose</span>={() => console.log(<span class="code-string">"Window closed"</span>)}
+    &gt;
+      &lt;<span class="code-tag">p</span>&gt;Custom styled window content&lt;/<span class="code-tag">p</span>&gt;
+    &lt;/<span class="code-tag">CustomWindow</span>&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

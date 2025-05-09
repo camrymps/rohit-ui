@@ -279,29 +279,49 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Checkbox component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomCheckbox = styled(Checkbox)`
-                .checkbox-box {
-                  border-color: purple;
-                }
-                
-                .checkbox-indicator {
-                  background-color: purple;
-                }
-                
-                .checkbox-label {
-                  font-weight: bold;
-                  color: purple;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomCheckbox label=<span class="code-string">"Custom Styled Checkbox"</span> checked /&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Checkbox } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomCheckbox = styled(Checkbox)`
+  .checkbox-input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--win98-navy);
+    border-radius: 3px;
+    margin-right: 8px;
+    position: relative;
+    
+    &:checked {
+      background: var(--win98-navy);
+      
+      &::after {
+        content: '✓';
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .checkbox-label {
+    font-family: 'Comic Sans MS', sans-serif;
+    color: var(--win98-navy);
+    font-size: 1.1em;
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomCheckbox</span>
+      <span class="code-attr-name">label</span>=<span class="code-string">"Custom Checkbox"</span>
+      <span class="code-attr-name">checked</span>={checked}
+      <span class="code-attr-name">onChange</span>={setChecked}
+    /&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

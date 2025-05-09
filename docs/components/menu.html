@@ -230,21 +230,35 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Menu component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomMenu = styled(Menu)`
-                background: #f0f0f0;
-                .menu-item {
-                  color: purple;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomMenu items={[{ label: <span class="code-string">"Custom"</span> }]} /&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Menu } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomMenu = styled(Menu)`
+  background: linear-gradient(to bottom, var(--win98-silver), white);
+  border: 2px solid var(--win98-navy);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  
+  .menu-item {
+    padding: 8px 16px;
+    font-family: 'Comic Sans MS', sans-serif;
+    
+    &:hover {
+      background: var(--win98-navy);
+      color: white;
+    }
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomMenu</span>
+      <span class="code-attr-name">items</span>={[
+        { <span class="code-attr-name">label</span>: <span class="code-string">"Custom Item 1"</span> },
+        { <span class="code-attr-name">label</span>: <span class="code-string">"Custom Item 2"</span> }
+      ]}
+    /&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

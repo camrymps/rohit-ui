@@ -204,24 +204,67 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the ProgressBar component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomProgressBar = styled(ProgressBar)`
-                background: #f0f0f0;
-                .progress-bar {
-                  background: purple;
-                }
-                .progress-label {
-                  color: purple;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomProgressBar value={50} showLabel /&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { ProgressBar } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomProgressBar = styled(ProgressBar)`
+  .progressbar-track {
+    background: var(--win98-silver);
+    border: 2px solid var(--win98-navy);
+    border-radius: 4px;
+    height: 24px;
+    overflow: hidden;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progressbar-fill {
+    background: linear-gradient(to right, var(--win98-navy), var(--win98-hot-pink));
+    height: 100%;
+    transition: width 0.3s ease;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%
+      );
+      background-size: 20px 20px;
+      animation: progress-animation 1s linear infinite;
+    }
+  }
+  
+  .progressbar-label {
+    font-family: 'Comic Sans MS', sans-serif;
+    color: var(--win98-navy);
+    font-size: 1.1em;
+    margin-bottom: 4px;
+  }
+  
+  @keyframes progress-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 0; }
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomProgressBar</span>
+      <span class="code-attr-name">value</span>={75}
+      <span class="code-attr-name">label</span>=<span class="code-string">"Loading..."</span>
+    /&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

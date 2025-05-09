@@ -252,29 +252,46 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Tabs component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomTabs = styled(Tabs)`
-                background: #f0f0f0;
-                .tab-header {
-                  background: purple;
-                  color: white;
-                }
-                .tab-content {
-                  padding: 20px;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomTabs&gt;
-                    &lt;Tabs.Tab title=<span class="code-string">"Custom Tab"</span>&gt;
-                      Custom styled content
-                    &lt;/Tabs.Tab&gt;
-                  &lt;/CustomTabs&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Tabs } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomTabs = styled(Tabs)`
+  .tab-list {
+    background: var(--win98-silver);
+    border-bottom: 2px solid var(--win98-navy);
+    padding: 4px;
+  }
+  
+  .tab {
+    padding: 8px 16px;
+    font-family: 'Comic Sans MS', sans-serif;
+    border: 2px solid transparent;
+    
+    &[aria-selected="true"] {
+      background: var(--win98-navy);
+      color: white;
+      border-color: var(--win98-navy);
+    }
+  }
+  
+  .tab-panel {
+    padding: 16px;
+    background: white;
+    border: 2px solid var(--win98-navy);
+    border-top: none;
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomTabs</span>
+      <span class="code-attr-name">tabs</span>={[
+        { <span class="code-attr-name">label</span>: <span class="code-string">"Custom Tab 1"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content 1&lt;/<span class="code-tag">p</span>&gt; },
+        { <span class="code-attr-name">label</span>: <span class="code-string">"Custom Tab 2"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content 2&lt;/<span class="code-tag">p</span>&gt; }
+      ]}
+    /&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

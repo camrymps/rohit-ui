@@ -209,27 +209,27 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Card component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomCard = styled(Card)`
-                background: linear-gradient(45deg, var(--win98-silver), white);
-                border-width: 3px;
-                border-style: dashed;
-                
-                h3 {
-                  font-family: 'Comic Sans MS', sans-serif;
-                  text-shadow: 2px 2px var(--win98-navy);
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomCard title=<span class="code-string">"Custom Card"</span>&gt;
-                    Custom styled card content
-                  &lt;/CustomCard&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Card } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomCard = styled(Card)`
+  background: linear-gradient(45deg, var(--win98-silver), white);
+  border-width: 3px;
+  border-style: dashed;
+  
+  h3 {
+    font-family: 'Comic Sans MS', sans-serif;
+    text-shadow: 2px 2px var(--win98-navy);
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomCard</span> <span class="code-attr-name">title</span>=<span class="code-string">"Custom Card"</span>&gt;
+      Custom styled card content
+    &lt;/<span class="code-tag">CustomCard</span>&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

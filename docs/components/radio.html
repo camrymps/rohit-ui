@@ -248,25 +248,47 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Radio component using styled-components:</p>
             <div class="example-code">
-              <pre><code class="language-tsx"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-<span class="code-keyword">import</span> { Component } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Radio } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
 
 <span class="code-keyword">const</span> CustomRadio = styled(Radio)`
-  .radio-box {
-    border-color: purple;
+  .radio-input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--win98-navy);
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    
+    &:checked {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background: var(--win98-navy);
+        border-radius: 50%;
+      }
+    }
   }
-  .radio-indicator {
-    background-color: purple;
-  }
+  
   .radio-label {
-    font-weight: bold;
-    color: purple;
+    font-family: 'Comic Sans MS', sans-serif;
+    color: var(--win98-navy);
+    font-size: 1.1em;
   }
 `;
 
 <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
   <span class="code-keyword">return</span> (
-    &lt;CustomRadio label="<span class="code-string">Custom Styled Radio</span>" checked /&gt;
+    &lt;<span class="code-tag">CustomRadio</span>
+      <span class="code-attr-name">label</span>=<span class="code-string">"Custom Radio"</span>
+      <span class="code-attr-name">checked</span>={checked}
+      <span class="code-attr-name">onChange</span>={setChecked}
+    /&gt;
   );
 }</code></pre>
             </div>

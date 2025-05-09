@@ -259,31 +259,46 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Dialog component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomDialog = styled(Dialog)`
-                background: #f0f0f0;
-                .dialog-header {
-                  background: purple;
-                  color: white;
-                }
-                .dialog-content {
-                  padding: 20px;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomDialog
-                    title=<span class="code-string">"Custom Dialog"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  &gt;
-                    <pre><code class="language-tsx"><p>Custom styled dialog content.</p></code></pre>
-                  &lt;/CustomDialog&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Dialog } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomDialog = styled(Dialog)`
+  background: linear-gradient(45deg, var(--win98-silver), white);
+  border: 3px solid var(--win98-navy);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+  
+  .dialog-header {
+    background: var(--win98-navy);
+    color: white;
+    padding: 12px;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1.2em;
+  }
+  
+  .dialog-content {
+    padding: 24px;
+  }
+  
+  .dialog-footer {
+    padding: 12px;
+    border-top: 2px solid var(--win98-navy);
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomDialog</span>
+      <span class="code-attr-name">title</span>=<span class="code-string">"Custom Dialog"</span>
+      <span class="code-attr-name">open</span>={isOpen}
+      <span class="code-attr-name">onClose</span>={() => setIsOpen(false)}
+    &gt;
+      &lt;<span class="code-tag">p</span>&gt;Custom styled dialog content&lt;/<span class="code-tag">p</span>&gt;
+    &lt;/<span class="code-tag">CustomDialog</span>&gt;
+  );
+}</code></pre>
             </div>
           </div>
 

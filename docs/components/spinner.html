@@ -196,25 +196,25 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Spinner component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomSpinner = styled(Spinner)`
-                border-width: 4px;
-                border-style: dashed;
-                animation: spin 2s linear infinite, rainbow 3s linear infinite;
-                
-                @keyframes rainbow {
-                  0% { border-color: red; }
-                  33% { border-color: green; }
-                  66% { border-color: blue; }
-                  100% { border-color: red; }
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> &lt;CustomSpinner /&gt;;
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Spinner } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomSpinner = styled(Spinner)`
+  border-width: 4px;
+  border-style: dashed;
+  animation: spin 2s linear infinite, rainbow 3s linear infinite;
+  
+  @keyframes rainbow {
+    0% { border-color: red; }
+    33% { border-color: green; }
+    66% { border-color: blue; }
+    100% { border-color: red; }
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> &lt;<span class="code-tag">CustomSpinner</span> /&gt;;
+}</code></pre>
             </div>
           </div>
 

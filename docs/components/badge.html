@@ -217,24 +217,24 @@
             <h2 class="section-title">CSS Customization</h2>
             <p>You can customize the Badge component using styled-components:</p>
             <div class="example-code">
-              <span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
-              
-              <span class="code-keyword">const</span> CustomBadge = styled(Badge)`
-                background: purple;
-                color: white;
-                .badge-content {
-                  font-family: 'Comic Sans MS', sans-serif;
-                }
-              `;
-              
-              <span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
-                <span class="code-keyword">return</span> (
-                  &lt;CustomBadge content=<span class="code-string">"5"</span>&gt;
-                    <pre><code class="language-tsx"><button>Custom Badge</button></code></pre>
-                  &lt;/CustomBadge&gt;
-                );
-              }
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> styled <span class="code-keyword">from</span> <span class="code-string">'styled-components'</span>;
+<span class="code-keyword">import</span> { Badge } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;
+
+<span class="code-keyword">const</span> CustomBadge = styled(Badge)`
+  background: purple;
+  color: white;
+  .badge-content {
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+`;
+
+<span class="code-function">function</span> <span class="code-function">MyComponent</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">CustomBadge</span> <span class="code-attr-name">content</span>=<span class="code-string">"5"</span>&gt;
+      &lt;<span class="code-tag">button</span>&gt;Custom Badge&lt;/<span class="code-tag">button</span>&gt;
+    &lt;/<span class="code-tag">CustomBadge</span>&gt;
+  );
+}</code></pre>
             </div>
           </div>
 
