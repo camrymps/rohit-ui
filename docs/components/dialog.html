@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Dialog } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -111,17 +111,21 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Dialog
-                    title=<span class="code-string">"Dialog Title"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  &gt;
-                    <pre><code class="language-tsx">&lt;p&gt;This is a basic dialog box.&lt;/p&gt;</code></pre>
-                    &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
-                      <pre><code class="language-tsx">&lt;Button onClick={() => setIsOpen(false)}&gt;OK&lt;/Button&gt;</code></pre>
-                      <pre><code class="language-tsx">&lt;Button onClick={() => setIsOpen(false)}&gt;Cancel&lt;/Button&gt;</code></pre>
-                    &lt;/div&gt;
-                  &lt;/Dialog&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic dialog</span>
+&lt;<span class="code-tag">Dialog</span>
+  <span class="code-attr-name">title</span>=<span class="code-string">"Confirmation"</span>
+  <span class="code-attr-name">open</span>={isOpen}
+  <span class="code-attr-name">onClose</span>={() => setIsOpen(false)}
+&gt;
+  &lt;<span class="code-tag">p</span>&gt;Are you sure you want to proceed?&lt;/<span class="code-tag">p</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr-name">className</span>=<span class="code-string">"dialog-buttons"</span>&gt;
+    &lt;<span class="code-tag">button</span> <span class="code-attr-name">onClick</span>={() => setIsOpen(false)}&gt;Cancel&lt;/<span class="code-tag">button</span>&gt;
+    &lt;<span class="code-tag">button</span> <span class="code-attr-name">onClick</span>={() => {
+      console.log(<span class="code-string">"Confirmed!"</span>);
+      setIsOpen(false);
+    }}&gt;Confirm&lt;/<span class="code-tag">button</span>&gt;
+  &lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">Dialog</span>&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -154,27 +158,15 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Dialog
-                    title=<span class="code-string">"Save File"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                  &gt;
-                    &lt;div&gt;
-                      <pre><code class="language-tsx">&lt;label&gt;File name:&lt;/label&gt;</code></pre>
-                      &lt;TextField defaultValue=<span class="code-string">"document.txt"</span> /&gt;
-                    &lt;/div&gt;
-                    &lt;div&gt;
-                      <pre><code class="language-tsx">&lt;label&gt;Save as type:&lt;/label&gt;</code></pre>
-                      &lt;Select&gt;
-                        <pre><code class="language-tsx">&lt;option&gt;Text Document (*.txt)&lt;/option&gt;</code></pre>
-                        <pre><code class="language-tsx">&lt;option&gt;All Files (*.*)&lt;/option&gt;</code></pre>
-                      &lt;/Select&gt;
-                    &lt;/div&gt;
-                    &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
-                      <pre><code class="language-tsx">&lt;Button onClick={handleSave}&gt;Save&lt;/Button&gt;</code></pre>
-                      <pre><code class="language-tsx">&lt;Button onClick={() => setIsOpen(false)}&gt;Cancel&lt;/Button&gt;</code></pre>
-                    &lt;/div&gt;
-                  &lt;/Dialog&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Dialog with custom width</span>
+&lt;<span class="code-tag">Dialog</span>
+  <span class="code-attr-name">title</span>=<span class="code-string">"Wide Dialog"</span>
+  <span class="code-attr-name">open</span>={isOpen}
+  <span class="code-attr-name">onClose</span>={() => setIsOpen(false)}
+  <span class="code-attr-name">width</span>=<span class="code-string">"600px"</span>
+&gt;
+  &lt;<span class="code-tag">p</span>&gt;This is a wider dialog&lt;/<span class="code-tag">p</span>&gt;
+&lt;/<span class="code-tag">Dialog</span>&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -196,17 +188,15 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Dialog
-                    title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                    rohitMode
-                  &gt;
-                    <pre><code class="language-tsx">&lt;p&gt;This dialog is unnecessarily complicated.&lt;/p&gt;</code></pre>
-                    &lt;div className=<span class="code-string">"dialog-buttons"</span>&gt;
-                      <pre><code class="language-tsx">&lt;Button onClick={() => setIsOpen(false)}&gt;OK&lt;/Button&gt;</code></pre>
-                    &lt;/div&gt;
-                  &lt;/Dialog&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode dialog</span>
+&lt;<span class="code-tag">Dialog</span>
+  <span class="code-attr-name">title</span>=<span class="code-string">"Dramatic Dialog"</span>
+  <span class="code-attr-name">open</span>={isOpen}
+  <span class="code-attr-name">onClose</span>={() => setIsOpen(false)}
+  <span class="code-attr-name">rohitMode</span>
+&gt;
+  &lt;<span class="code-tag">p</span>&gt;This dialog is unnecessarily dramatic!&lt;/<span class="code-tag">p</span>&gt;
+&lt;/<span class="code-tag">Dialog</span>&gt;</code></pre>
                 </div>
                 <p><em>Note: In Rohit Mode, the dialog will wiggle, change color, and sometimes randomly reposition itself.</em></p>
               </div>

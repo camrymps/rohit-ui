@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Accordion } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -112,14 +112,17 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Accordion>
-                    <Accordion.Item title=<span class="code-string">"Section 1"</span>>
-                      Content for section 1
-                    </Accordion.Item>
-                    <Accordion.Item title=<span class="code-string">"Section 2"</span>>
-                      Content for section 2
-                    </Accordion.Item>
-                  </Accordion></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic accordion</span>
+&lt;<span class="code-tag">Accordion</span> <span class="code-attr-name">items</span>={[
+  { 
+    <span class="code-attr-name">title</span>: <span class="code-string">"Section 1"</span>,
+    <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content for section 1&lt;/<span class="code-tag">p</span>&gt;
+  },
+  { 
+    <span class="code-attr-name">title</span>: <span class="code-string">"Section 2"</span>,
+    <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content for section 2&lt;/<span class="code-tag">p</span>&gt;
+  }
+]} /&gt;</code></pre></div>
               </div>
             </div>
 
@@ -144,14 +147,23 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Accordion>
-                    <Accordion.Item title=<span class="code-string">"Files"</span> icon=<span class="code-string">"📁"</span>>
-                      File content
-                    </Accordion.Item>
-                    <Accordion.Item title=<span class="code-string">"Settings"</span> icon=<span class="code-string">"⚙️"</span>>
-                      Settings content
-                    </Accordion.Item>
-                  </Accordion></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Controlled accordion with state</span>
+<span class="code-keyword">const</span> [expandedSections, setExpandedSections] = useState([0]);
+
+&lt;<span class="code-tag">Accordion</span>
+  <span class="code-attr-name">items</span>={[
+    { 
+      <span class="code-attr-name">title</span>: <span class="code-string">"Files"</span>,
+      <span class="code-attr-name">icon</span>: <span class="code-string">"📁"</span>
+    },
+    { 
+      <span class="code-attr-name">title</span>: <span class="code-string">"Settings"</span>,
+      <span class="code-attr-name">icon</span>: <span class="code-string">"⚙️"</span>
+    }
+  ]}
+  <span class="code-attr-name">expandedSections</span>={expandedSections}
+  <span class="code-attr-name">onChange</span>={setExpandedSections}
+/&gt;</code></pre></div>
               </div>
             </div>
 
@@ -170,11 +182,20 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Accordion rohitMode>
-                    <Accordion.Item title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>>
-                      This accordion is unnecessarily complicated.
-                    </Accordion.Item>
-                  </Accordion></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode accordion</span>
+&lt;<span class="code-tag">Accordion</span>
+  <span class="code-attr-name">items</span>={[
+    { 
+      <span class="code-attr-name">title</span>: <span class="code-string">"Dramatic Section 1"</span>,
+      <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Drama content 1&lt;/<span class="code-tag">p</span>&gt;
+    },
+    { 
+      <span class="code-attr-name">title</span>: <span class="code-string">"Dramatic Section 2"</span>,
+      <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Drama content 2&lt;/<span class="code-tag">p</span>&gt;
+    }
+  ]}
+  <span class="code-attr-name">rohitMode</span>
+/&gt;</code></pre></div>
                 <p><em>Note: In Rohit Mode, the accordion will wiggle, change color, and sometimes randomly expand/collapse sections.</em></p>
               </div>
             </div>

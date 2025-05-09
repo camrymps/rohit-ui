@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Tabs } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -107,17 +107,12 @@
                   <div style="padding: 16px;">Content for Tab 1</div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Tabs>
-                    <Tabs.Tab title=<span class="code-string">"Tab 1"</span>>
-                      Content for Tab 1
-                    </Tabs.Tab>
-                    <Tabs.Tab title=<span class="code-string">"Tab 2"</span>>
-                      Content for Tab 2
-                    </Tabs.Tab>
-                    <Tabs.Tab title=<span class="code-string">"Tab 3"</span>>
-                      Content for Tab 3
-                    </Tabs.Tab>
-                  </Tabs></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic tabs</span>
+&lt;<span class="code-tag">Tabs</span> <span class="code-attr-name">tabs</span>={[
+  { <span class="code-attr-name">label</span>: <span class="code-string">"Tab 1"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content for tab 1&lt;/<span class="code-tag">p</span>&gt; },
+  { <span class="code-attr-name">label</span>: <span class="code-string">"Tab 2"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content for tab 2&lt;/<span class="code-tag">p</span>&gt; },
+  { <span class="code-attr-name">label</span>: <span class="code-string">"Tab 3"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Content for tab 3&lt;/<span class="code-tag">p</span>&gt; }
+]} /&gt;</code></pre></div>
               </div>
             </div>
 
@@ -141,17 +136,18 @@
                   <div style="padding: 16px;">Files content</div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Tabs>
-                    <Tabs.Tab title=<span class="code-string">"Files"</span> icon=<span class="code-string">"📁"</span>>
-                      Files content
-                    </Tabs.Tab>
-                    <Tabs.Tab title=<span class="code-string">"Settings"</span> icon=<span class="code-string">"⚙️"</span>>
-                      Settings content
-                    </Tabs.Tab>
-                    <Tabs.Tab title=<span class="code-string">"About"</span> icon=<span class="code-string">"ℹ️"</span>>
-                      About content
-                    </Tabs.Tab>
-                  </Tabs></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Controlled tabs with state</span>
+<span class="code-keyword">const</span> [activeTab, setActiveTab] = useState(0);
+
+&lt;<span class="code-tag">Tabs</span>
+  <span class="code-attr-name">tabs</span>={[
+    { <span class="code-attr-name">label</span>: <span class="code-string">"Files"</span>, <span class="code-attr-name">icon</span>: <span class="code-string">"📁"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Files content&lt;/<span class="code-tag">p</span>&gt; },
+    { <span class="code-attr-name">label</span>: <span class="code-string">"Settings"</span>, <span class="code-attr-name">icon</span>: <span class="code-string">"⚙️"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Settings content&lt;/<span class="code-tag">p</span>&gt; },
+    { <span class="code-attr-name">label</span>: <span class="code-string">"About"</span>, <span class="code-attr-name">icon</span>: <span class="code-string">"ℹ️"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;About content&lt;/<span class="code-tag">p</span>&gt; }
+  ]}
+  <span class="code-attr-name">activeTab</span>={activeTab}
+  <span class="code-attr-name">onChange</span>={setActiveTab}
+/&gt;</code></pre></div>
               </div>
             </div>
 
@@ -167,11 +163,14 @@
                   <div style="padding: 16px; color: var(--win98-hot-pink);">This tab is unnecessarily complicated.</div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Tabs rohitMode>
-                    <Tabs.Tab title=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>>
-                      This tab is unnecessarily complicated.
-                    </Tabs.Tab>
-                  </Tabs></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode tabs</span>
+&lt;<span class="code-tag">Tabs</span>
+  <span class="code-attr-name">tabs</span>={[
+    { <span class="code-attr-name">label</span>: <span class="code-string">"Dramatic Tab 1"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Drama content 1&lt;/<span class="code-tag">p</span>&gt; },
+    { <span class="code-attr-name">label</span>: <span class="code-string">"Dramatic Tab 2"</span>, <span class="code-attr-name">content</span>: &lt;<span class="code-tag">p</span>&gt;Drama content 2&lt;/<span class="code-tag">p</span>&gt; }
+  ]}
+  <span class="code-attr-name">rohitMode</span>
+/&gt;</code></pre></div>
                 <p><em>Note: In Rohit Mode, the tabs will wiggle, change color, and sometimes randomly reorder themselves.</em></p>
               </div>
             </div>

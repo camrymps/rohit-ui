@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Spinner } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -103,7 +103,8 @@
                   <span>Loading...</span>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;Spinner /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic spinner</span>
+&lt;<span class="code-tag">Spinner</span> /&gt;</code></pre></div>
               </div>
             </div>
 
@@ -117,7 +118,11 @@
                   <span>Loading...</span>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;Spinner size=&lt;span class="code-string"&gt;"large"&gt; /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Spinner with custom size and color</span>
+&lt;<span class="code-tag">Spinner</span> 
+  <span class="code-attr-name">size</span>=<span class="code-string">"large"</span>
+  <span class="code-attr-name">color</span>=<span class="code-string">"#ff0000"</span>
+/&gt;</code></pre></div>
               </div>
             </div>
 
@@ -131,7 +136,11 @@
                   <span>Loading...</span>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;Spinner rohitMode /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode spinner</span>
+&lt;<span class="code-tag">Spinner</span> 
+  <span class="code-attr-name">size</span>=<span class="code-string">"large"</span>
+  <span class="code-attr-name">rohitMode</span>
+/&gt;</code></pre></div>
                 <p><em>Note: In Rohit Mode, the spinner will wiggle, change color, and sometimes spin in the wrong direction.</em></p>
               </div>
             </div>

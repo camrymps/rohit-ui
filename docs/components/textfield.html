@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { TextField } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -100,7 +100,8 @@
               <div class="example-content">
                 <input type="text" value="" placeholder="Type here..." style="border: 1px solid var(--win98-black); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px;">
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;TextField placeholder="<span class="code-string">Type here...</span>" /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic text field with placeholder</span>
+&lt;<span class="code-tag">TextField</span> <span class="code-attr-name">placeholder</span>=<span class="code-string">"Type here..."</span> /&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -111,7 +112,8 @@
                 <label style="margin-right: 8px;">Name:</label>
                 <input type="text" value="Michael Scott" style="border: 1px solid var(--win98-black); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px;">
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;TextField label="<span class="code-string">Name</span>" value="<span class="code-string">Michael Scott</span>" /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Text field with label and value</span>
+&lt;<span class="code-tag">TextField</span> <span class="code-attr-name">label</span>=<span class="code-string">"Name"</span> <span class="code-attr-name">value</span>=<span class="code-string">"Michael Scott"</span> /&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -121,7 +123,8 @@
               <div class="example-content">
                 <input type="text" value="Can't touch this" disabled style="border: 1px solid var(--win98-black); background: var(--win98-silver); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px; opacity: 0.6;">
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;TextField value="<span class="code-string">Can't touch this</span>" disabled /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Disabled text field</span>
+&lt;<span class="code-tag">TextField</span> <span class="code-attr-name">value</span>=<span class="code-string">"Can't touch this"</span> <span class="code-attr-name">disabled</span> /&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -131,8 +134,13 @@
               <div class="example-content">
                 <input type="text" value="Dynamic" style="border: 1px solid var(--win98-black); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px;">
                 <div class="example-code">
-                  <pre><code class="language-tsx"><span class="code-keyword">const</span> [value, setValue] = useState("<span class="code-string">Dynamic</span>");
-&lt;TextField value={value} onChange={e =&gt; setValue(e.target.value)} /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Controlled text field with state</span>
+<span class="code-keyword">const</span> [value, setValue] = useState(<span class="code-string">"Dynamic"</span>);
+
+&lt;<span class="code-tag">TextField</span> 
+  <span class="code-attr-name">value</span>={value} 
+  <span class="code-attr-name">onChange</span>={e =&gt; setValue(e.target.value)} 
+/&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -142,7 +150,8 @@
               <div class="example-content">
                 <input type="text" value="Why is this shaking?" style="border: 1px solid var(--win98-hot-pink); background: var(--win98-white); padding: 2px 6px; box-shadow: inset 1px 1px 0px var(--win98-dark-gray), inset -1px -1px 0px var(--win98-white); font-size: 14px; animation: wiggle 1s infinite; color: var(--win98-hot-pink);">
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;TextField value="<span class="code-string">Why is this shaking?</span>" rohitMode /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode text field</span>
+&lt;<span class="code-tag">TextField</span> <span class="code-attr-name">value</span>=<span class="code-string">"Why is this shaking?"</span> <span class="code-attr-name">rohitMode</span> /&gt;</code></pre></div>
                 <p><em>Note: In Rohit Mode, the text field will wiggle, randomly change its value, and sometimes refuse to accept input.</em></p>
               </div>
             </div>

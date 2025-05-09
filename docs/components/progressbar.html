@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { ProgressBar } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -102,7 +102,8 @@
                   <div style="width: 60%; height: 100%; background: var(--win98-navy);"></div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;ProgressBar value={60} /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic progress bar at 50%</span>
+&lt;<span class="code-tag">ProgressBar</span> <span class="code-attr-name">value</span>={50} /&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -114,7 +115,11 @@
                   <div style="width: 80%; height: 100%; background: var(--win98-navy); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">80%</div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;ProgressBar value={80} showLabel /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Progress bar with label</span>
+&lt;<span class="code-tag">ProgressBar</span> 
+  <span class="code-attr-name">value</span>={75} 
+  <span class="code-attr-name">label</span>=<span class="code-string">"Loading..."</span> 
+/&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -126,7 +131,8 @@
                   <div style="width: 60px; height: 100%; background: var(--win98-navy); position: absolute; left: 0; animation: indeterminate 1s linear infinite;"></div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;ProgressBar indeterminate /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Indeterminate progress bar</span>
+&lt;<span class="code-tag">ProgressBar</span> <span class="code-attr-name">indeterminate</span> /&gt;</code></pre></div>
               </div>
             </div>
             <div class="example">
@@ -138,7 +144,11 @@
                   <div style="width: 60%; height: 100%; background: var(--win98-hot-pink); animation: wiggle 1s infinite;"></div>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;ProgressBar value={60} rohitMode /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode progress bar</span>
+&lt;<span class="code-tag">ProgressBar</span> 
+  <span class="code-attr-name">value</span>={50} 
+  <span class="code-attr-name">rohitMode</span> 
+/&gt;</code></pre></div>
                 <p><em>Note: In Rohit Mode, the bar will wiggle, change color, and sometimes fill up or empty randomly.</em></p>
               </div>
             </div>

@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Checkbox } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -114,8 +114,8 @@
                 </div>
                 
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;span class="code-comment"&gt;// Unchecked&lt;/span&gt;
-                  <Checkbox label=&lt;span class="code-string"&gt;"Unchecked"&lt;/span&gt; /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic unchecked checkbox</span>
+&lt;<span class="code-tag">Checkbox</span> <span class="code-attr-name">label</span>=<span class="code-string">"Unchecked"</span> /&gt;</code></pre></div>
               </div>
             </div>
             
@@ -138,8 +138,8 @@
                 </div>
                 
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;span class="code-comment"&gt;// Disabled unchecked&lt;/span&gt;
-                  <Checkbox label=&lt;span class="code-string"&gt;"Disabled"&lt;/span&gt; disabled /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Disabled unchecked checkbox</span>
+&lt;<span class="code-tag">Checkbox</span> <span class="code-attr-name">label</span>=<span class="code-string">"Disabled"</span> <span class="code-attr-name">disabled</span> /&gt;</code></pre></div>
               </div>
             </div>
             
@@ -156,13 +156,14 @@
                 </div>
                 
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;span class="code-keyword"&gt;const&lt;/span&gt; [checked, setChecked] = useState(&lt;span class="code-keyword"&gt;true&lt;/span&gt;);
-                  
-                  <Checkbox 
-                    label=&lt;span class="code-string"&gt;"Controlled"&gt;
-                    checked={checked}
-                    onChange={(e) => setChecked(e.target.checked)}
-                  /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Controlled checkbox with state</span>
+<span class="code-keyword">const</span> [checked, setChecked] = useState(<span class="code-keyword">true</span>);
+
+&lt;<span class="code-tag">Checkbox</span> 
+  <span class="code-attr-name">label</span>=<span class="code-string">"Controlled"</span>
+  <span class="code-attr-name">checked</span>={checked}
+  <span class="code-attr-name">onChange</span>={(e) => setChecked(e.target.checked)}
+/&gt;</code></pre></div>
               </div>
             </div>
             
@@ -179,7 +180,8 @@
                 </div>
                 
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;Checkbox label=&lt;span class="code-string"&gt;"Indeterminate"&lt;/span&gt; indeterminate /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Indeterminate checkbox</span>
+&lt;<span class="code-tag">Checkbox</span> <span class="code-attr-name">label</span>=<span class="code-string">"Indeterminate"</span> <span class="code-attr-name">indeterminate</span> /&gt;</code></pre></div>
               </div>
             </div>
             
@@ -196,7 +198,8 @@
                 </div>
                 
                 <div class="example-code">
-                  <pre><code class="language-tsx">&lt;Checkbox label=&lt;span class="code-string"&gt;"Unnecessarily Complicated"&lt;/span&gt; checked rohitMode /&gt;</code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode checkbox</span>
+&lt;<span class="code-tag">Checkbox</span> <span class="code-attr-name">label</span>=<span class="code-string">"Unnecessarily Complicated"</span> <span class="code-attr-name">checked</span> <span class="code-attr-name">rohitMode</span> /&gt;</code></pre></div>
                 <p><em>Note: In actual Rohit Mode, the checkbox will wiggle randomly, change state unexpectedly, and occasionally refuse to be unchecked.</em></p>
               </div>
             </div>

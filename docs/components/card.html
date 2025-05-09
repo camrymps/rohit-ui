@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Card } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -103,9 +103,11 @@
                   <p style="margin: 0;">This is a basic card with some content.</p>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Card title=<span class="code-string">"Card Title"</span>>
-                    This is a basic card with some content.
-                  </Card></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic card</span>
+&lt;<span class="code-tag">Card</span> <span class="code-attr-name">title</span>=<span class="code-string">"Card Title"</span>&gt;
+  &lt;<span class="code-tag">p</span>&gt;This is the card content.&lt;/<span class="code-tag">p</span>&gt;
+&lt;/<span class="code-tag">Card</span>&gt;</code></pre>
+                </div>
               </div>
             </div>
 
@@ -123,13 +125,13 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Card title=<span class="code-string">"Card with Actions"</span>&gt;
-                    <pre><code class="language-tsx"><p>This card has some action buttons.</p></code></pre>
-                    &lt;div style={{ display: 'flex', gap: '8px' }}&gt;
-                      <pre><code class="language-tsx"><Button>Action 1</Button></code></pre>
-                      <pre><code class="language-tsx"><Button>Action 2</Button></code></pre>
-                    &lt;/div&gt;
-                  &lt;/Card&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Card with custom header and footer</span>
+&lt;<span class="code-tag">Card</span>
+  <span class="code-attr-name">header</span>=&lt;<span class="code-tag">div</span> <span class="code-attr-name">className</span>=<span class="code-string">"custom-header"</span>&gt;Custom Header&lt;/<span class="code-tag">div</span>&gt;
+  <span class="code-attr-name">footer</span>=&lt;<span class="code-tag">div</span> <span class="code-attr-name">className</span>=<span class="code-string">"custom-footer"</span>&gt;Custom Footer&lt;/<span class="code-tag">div</span>&gt;
+&gt;
+  &lt;<span class="code-tag">p</span>&gt;Card content goes here.&lt;/<span class="code-tag">p</span>&gt;
+&lt;/<span class="code-tag">Card</span>&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -144,9 +146,14 @@
                   <p style="margin: 0;">This card is extra special in Rohit Mode!</p>
                 </div>
                 <div class="example-code">
-                  <pre><code class="language-tsx"><Card title=<span class="code-string">"✨ Fancy Card ✨"</span> rohitMode>
-                    This card is extra special in Rohit Mode!
-                  </Card></code></pre></div>
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode card</span>
+&lt;<span class="code-tag">Card</span>
+  <span class="code-attr-name">title</span>=<span class="code-string">"UNNECESSARILY COMPLICATED"</span>
+  <span class="code-attr-name">rohitMode</span>
+&gt;
+  &lt;<span class="code-tag">p</span>&gt;This card is unnecessarily dramatic!&lt;/<span class="code-tag">p</span>&gt;
+&lt;/<span class="code-tag">Card</span>&gt;</code></pre>
+                </div>
                 <p><em>Note: In Rohit Mode, the card will wiggle, change color, and sometimes display random emojis.</em></p>
               </div>
             </div>

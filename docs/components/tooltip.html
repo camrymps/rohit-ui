@@ -87,7 +87,7 @@
           <div class="section">
             <h2 class="section-title">Import</h2>
             <div class="example-code">
-              <pre><code class="language-typescript">import { Component } from 'rohit-ui';</code></pre>
+              <pre><code class="language-typescript"><span class="code-keyword">import</span> { Tooltip } <span class="code-keyword">from</span> <span class="code-string">'rohit-ui'</span>;</code></pre>
             </div>
           </div>
 
@@ -105,9 +105,10 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Tooltip content=<span class="code-string">"This is a tooltip"</span>&gt;
-                    <pre><code class="language-tsx">&lt;button&gt;Hover me&lt;/button&gt;</code></pre>
-                  &lt;/Tooltip&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Basic tooltip</span>
+&lt;<span class="code-tag">Tooltip</span> <span class="code-attr-name">text</span>=<span class="code-string">"Hover me!"</span>&gt;
+  &lt;<span class="code-tag">button</span>&gt;Hover over this button&lt;/<span class="code-tag">button</span>&gt;
+&lt;/<span class="code-tag">Tooltip</span>&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -124,9 +125,13 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Tooltip content=<span class="code-string">"Tooltip above"</span> position=<span class="code-string">"top"</span>&gt;
-                    <pre><code class="language-tsx">&lt;button&gt;Hover me&lt;/button&gt;</code></pre>
-                  &lt;/Tooltip&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Tooltip with custom position</span>
+&lt;<span class="code-tag">Tooltip</span> 
+  <span class="code-attr-name">text</span>=<span class="code-string">"I'm on the right!"</span>
+  <span class="code-attr-name">position</span>=<span class="code-string">"right"</span>
+&gt;
+  &lt;<span class="code-tag">button</span>&gt;Hover me&lt;/<span class="code-tag">button</span>&gt;
+&lt;/<span class="code-tag">Tooltip</span>&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -143,9 +148,13 @@
                   </div>
                 </div>
                 <div class="example-code">
-                  &lt;Tooltip content=<span class="code-string">"UNNECESSARILY COMPLICATED"</span> rohitMode&gt;
-                    <pre><code class="language-tsx">&lt;button&gt;Hover me&lt;/button&gt;</code></pre>
-                  &lt;/Tooltip&gt;
+                  <pre><code class="language-tsx"><span class="code-comment">// Rohit Mode tooltip</span>
+&lt;<span class="code-tag">Tooltip</span> 
+  <span class="code-attr-name">text</span>=<span class="code-string">"I'm dramatic!"</span>
+  <span class="code-attr-name">rohitMode</span>
+&gt;
+  &lt;<span class="code-tag">button</span>&gt;Hover for drama&lt;/<span class="code-tag">button</span>&gt;
+&lt;/<span class="code-tag">Tooltip</span>&gt;</code></pre>
                 </div>
                 <p><em>Note: In Rohit Mode, the tooltip will wiggle, change color, and sometimes randomly reposition itself.</em></p>
               </div>
