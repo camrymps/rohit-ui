@@ -93,24 +93,32 @@ function MyComponent() {
 
 ## Development
 
-This project uses Vite for development and building.
+This project is a React UI kit that can be installed as an NPM package. To build the package:
 
 ```bash
-# Run the example app
-npm run dev
-
-# Build the library
 npm run build
+```
 
-# Build the example app
-npm run build:example
+This will compile the TypeScript files into the `dist` directory.
+
+## Usage
+
+Install the package:
+
+```bash
+npm install rohit-ui
+```
+
+Then import and use the components:
+
+```tsx
+import { Button } from "rohit-ui";
+
+function App() {
+  return <Button>Click me!</Button>;
+}
 ```
 
 ## Project Structure
 
-- `/src/lib` - The actual UI component library
-- `/src/example` - An example app showcasing all components
-
-## License
-
-MIT
+- `/src/lib`
